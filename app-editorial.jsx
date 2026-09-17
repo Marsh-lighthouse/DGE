@@ -91,14 +91,14 @@ function EdRail({ activeId, onNav, collapsed, onToggle, items, showAccount = tru
   const Logo = ({ icon }) => {
     const cb = (typeof window !== "undefined" && window.LHBrand && window.LHBrand.current() !== "marsh") ? window.LHBrand.get() : null;
     if (cb) {
-      // For DGE, when collapsed, show only the white outline icon (never the dark variant)
-      const isDgeCollapsed = cb.id === "dge" && icon;
       const h = icon ? cb.railIconH : cb.railLogoH;
       const st = (disp) => ({ height: h, width: "auto", maxWidth: icon ? 56 : 168, objectFit: "contain", display: disp, marginRight: icon ? 0 : "auto" });
+      // Two variants; the active rail palette toggles which shows via --rail-logo-white / --rail-logo-dark.
+      // DGE's rail is a light steel, so it shows the DARK logo/icon (good contrast) in both expanded + collapsed.
       return (
         <React.Fragment>
           <img src={icon ? cb.iconWhite : cb.logoWhite} alt={cb.label} style={st("var(--rail-logo-white, block)")} />
-          {!isDgeCollapsed && <img src={icon ? cb.icon : cb.logo} alt={cb.label} style={st("var(--rail-logo-dark, none)")} />}
+          <img src={icon ? cb.icon : cb.logo} alt={cb.label} style={st("var(--rail-logo-dark, none)")} />
         </React.Fragment>
       );
     }
