@@ -280,7 +280,7 @@ body > div:not([class])[style*="border-radius"]:not([style*="border-radius: 50%"
    ═══════════════════════════════════════════════════════════════════════ */
 /* Plan controls (Sample-10 completion: linear bar, slider, segmented button).
    Light = navy #000F47 fill with sky color-mix(in srgb, var(--primary) 9%, #ffffff) content, per the MDS light spec. */
-:root { --pl-fill: var(--primary); --pl-fill-on: #ffffff; --pl-fill-empty: rgba(0,15,71,.18); }
+:root { --pl-fill: var(--primary); --pl-fill-on: var(--action-text); --pl-fill-empty: rgba(0,15,71,.18); }
 :root[data-theme="dark"] {
   /* EXACT MDS dark-surface Input-field border, verified in the MDS Figma:
      --v3-border-input → --v3-base-neutral-clear → --neutral-gray-500-2 = #B9B6B1,
@@ -289,7 +289,7 @@ body > div:not([class])[style*="border-radius"]:not([style*="border-radius: 50%"
   /* Plan controls: navy #000F47 ≈ the dark surface (rgb 21,30,48) → the fill is
      invisible on dark. Flip to Blue-500 #82BAFF; content on the filled segment
      becomes dark ink. Track #94918C already reads on both surfaces. */
-  --pl-fill: var(--accent); --pl-fill-on: #ffffff; --pl-fill-empty: rgba(130,186,255,.30);
+  --pl-fill: var(--accent); --pl-fill-on: var(--action-text); --pl-fill-empty: rgba(130,186,255,.30);
 }
 /* Dark-surface semantic badges — EXACT MDS values pulled from the Figma file.
    MDS defines Badge with only Type × Soft-background axes (no separate dark
