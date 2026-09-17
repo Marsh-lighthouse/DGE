@@ -85,7 +85,7 @@ html[data-client-brand="generali"] {
    progress panel, FAB) that carry white text must NOT use it — override the deep
    surface with a true dark steel-navy (white ≈ 14:1). Generali red is already dark
    enough for white text, so it keeps the default (--surface-deep = --primary). */
-html[data-client-brand="dge"] { --surface-deep: #16283D; }
+html[data-client-brand="dge"] { --surface-deep: #1A1A1A; }
 
 /* Anywhere the app sets a primary-coloured TEXT inline (headlines, nav labels,
    stats, card titles — ~100 sites), force the same neutral ink instead of the

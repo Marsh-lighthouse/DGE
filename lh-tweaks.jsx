@@ -227,7 +227,7 @@ function LighthouseTweaks() {
     // above it (DGE steel ≈0.335) white text fails, so use dark ink.
     if (relLum(toRGB(primary)) > 0.18) {
       // Light rail (DGE steel): dark ink foreground — AA on the light primary fill.
-      set({ "--rail-bg": "var(--primary)", "--rail-fg": "rgba(0,15,71,.86)", "--rail-icon": "rgba(0,15,71,.74)", "--rail-active-bg": "rgba(0,15,71,.14)", "--rail-active-fg": "#000F47", "--rail-active-icon": "#000F47", "--rail-group": "rgba(0,15,71,.86)", "--rail-border": "rgba(0,15,71,.20)", "--rail-ring-track": "rgba(0,15,71,.16)", "--rail-cta-bg": "#000F47", "--rail-cta-fg": "#ffffff", "--rail-cta-border": "transparent", "--rail-active-line": "rgba(0,15,71,.14)", "--rail-logo-white": "none", "--rail-logo-dark": "block" });
+      set({ "--rail-bg": "var(--primary)", "--rail-fg": "rgba(0,0,0,.86)", "--rail-icon": "rgba(0,0,0,.74)", "--rail-active-bg": "rgba(0,0,0,.14)", "--rail-active-fg": "#1A1A1A", "--rail-active-icon": "#1A1A1A", "--rail-group": "rgba(0,0,0,.86)", "--rail-border": "rgba(0,0,0,.20)", "--rail-ring-track": "rgba(0,0,0,.16)", "--rail-cta-bg": "#1A1A1A", "--rail-cta-fg": "#ffffff", "--rail-cta-border": "transparent", "--rail-active-line": "rgba(0,0,0,.14)", "--rail-logo-white": "none", "--rail-logo-dark": "block" });
     } else {
       // Dark rail (Marsh midnight / Generali red): white foreground, raised opacities.
       // Group opacity is set for the *lighter* dark brand (Generali red ≈0.095 luminance):
