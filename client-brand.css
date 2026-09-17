@@ -76,7 +76,7 @@ html[data-client-brand="generali"] .lg-feature-img {
    (which already pass). */
 html[data-client-brand="dge"],
 html[data-client-brand="generali"] {
-  --ink:   #262626;   /* body / headings — WCAG AAA */
+  --ink:   #1A1A1A;   /* body / headings — WCAG AAA */
   --muted: #595959;   /* secondary text (~65% black) — WCAG AA */
   --line:  #D4D4D4;   /* borders / rules — neutral light grey */
 }
@@ -96,7 +96,7 @@ html[data-client-brand="dge"] [style^="color: var(--primary)"],
 html[data-client-brand="dge"] [style*="; color: var(--primary)"],
 html[data-client-brand="generali"] [style^="color: var(--primary)"],
 html[data-client-brand="generali"] [style*="; color: var(--primary)"] {
-  color: #262626 !important;
+  color: #1A1A1A !important;
 }
 
 /* Same for accent-coloured text (status eyebrows, "In progress" pills, links): the
@@ -108,7 +108,7 @@ html[data-client-brand="dge"] [style^="color: var(--accent)"],
 html[data-client-brand="dge"] [style*="; color: var(--accent)"],
 html[data-client-brand="generali"] [style^="color: var(--accent)"],
 html[data-client-brand="generali"] [style*="; color: var(--accent)"] {
-  color: #262626 !important;
+  color: #1A1A1A !important;
 }
 
 /* Login form: its headings/labels colour via stylesheet (var(--primary)), not
@@ -116,4 +116,4 @@ html[data-client-brand="generali"] [style*="; color: var(--accent)"] {
 html[data-client-brand="dge"] .lg-title,
 html[data-client-brand="dge"] .lg-label,
 html[data-client-brand="generali"] .lg-title,
-html[data-client-brand="generali"] .lg-label { color: #262626; }
+html[data-client-brand="generali"] .lg-label { color: #1A1A1A; }
