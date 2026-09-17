@@ -18,8 +18,8 @@
       // Dark mode: lighter steel for fills/accents; steel CTA keeps dark text. Running
       // text is neutralised to light ink by dark-theme.css.
       varsDark: { "--primary": "#9DBBD8", "--accent": "#9DBBD8", "--action": "#81A0BD", "--action-text": "#1A1A1A" },
-      logo: "brand/clients/dge.png", logoWhite: "brand/clients/dge-white.svg",
-      icon: "brand/clients/dge-icon.png", iconWhite: "brand/clients/dge-icon-white.svg",
+      logo: "brand/clients/dge.png?v=1789682370", logoWhite: "brand/clients/dge-white.svg?v=1789682370",
+      icon: "brand/clients/dge-icon.png?v=1789682370", iconWhite: "brand/clients/dge-icon-white.svg?v=1789682370",
       railLogoH: 30, railIconH: 56, loginAlt: "Department of Government Enablement",
       // Login screen only: DGE-specific feature photo (user-supplied)
       loginPhoto: "brand/clients/dge-login.jpg"
