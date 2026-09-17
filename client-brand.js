@@ -14,10 +14,10 @@
     dge: {
       id: "dge", label: "DG", dot: "#81A0BD",
       // DGE steel is a LIGHT fill — CTA text must be dark navy (white = ~2.7:1, fails AA); navy ≈ 6.6:1.
-      vars: { "--primary": "#81A0BD", "--accent": "#54779B", "--action": "#81A0BD", "--action-text": "#000F47" },
+      vars: { "--primary": "#81A0BD", "--accent": "#54779B", "--action": "#81A0BD", "--action-text": "#131417" },
       // Dark mode: lighter steel for fills/accents; steel CTA keeps dark text. Running
       // text is neutralised to light ink by dark-theme.css.
-      varsDark: { "--primary": "#9DBBD8", "--accent": "#9DBBD8", "--action": "#81A0BD", "--action-text": "#0B1220" },
+      varsDark: { "--primary": "#9DBBD8", "--accent": "#9DBBD8", "--action": "#81A0BD", "--action-text": "#131417" },
       logo: "brand/clients/dge.png", logoWhite: "brand/clients/dge-white.svg",
       icon: "brand/clients/dge-icon.png", iconWhite: "brand/clients/dge-icon-white.svg",
       railLogoH: 30, railIconH: 56, loginAlt: "Department of Government Enablement",
