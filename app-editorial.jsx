@@ -91,12 +91,17 @@ function EdRail({ activeId, onNav, collapsed, onToggle, items, showAccount = tru
   const Logo = ({ icon }) => {
     const cb = (typeof window !== "undefined" && window.LHBrand && window.LHBrand.current() !== "marsh") ? window.LHBrand.get() : null;
     if (cb) {
-      // DGE's collapsed icon runs a little larger so the emblem reads clearly (white
-      // emblem on the dark rail, colour emblem on the light steel rail).
-      const iconMax = (cb.id === "dge" && icon) ? 66 : 56;
-      const h = icon ? ((cb.id === "dge") ? 66 : cb.railIconH) : cb.railLogoH;
+      const isDgeIcon = cb.id === "dge" && icon;
+      const iconMax = isDgeIcon ? 66 : 56;
+      const h = icon ? (isDgeIcon ? 66 : cb.railIconH) : cb.railLogoH;
       const st = (disp) => ({ height: h, width: "auto", maxWidth: icon ? iconMax : 168, objectFit: "contain", display: disp, marginRight: icon ? 0 : "auto" });
-      // Two variants; the active rail palette toggles which shows via --rail-logo-white / --rail-logo-dark.
+      // DGE's white icon file is a flat silhouette (reads as a blob). The full-colour Abu
+      // Dhabi emblem is self-contained and reads on BOTH the steel (light) and dark rail,
+      // so use it for the collapsed icon in both themes.
+      if (isDgeIcon) {
+        return <img src={cb.icon} alt={cb.label} style={st("block")} />;
+      }
+      // Otherwise two variants; the active rail palette toggles via --rail-logo-white / --rail-logo-dark.
       return (
         <React.Fragment>
           <img src={icon ? cb.iconWhite : cb.logoWhite} alt={cb.label} style={st("var(--rail-logo-white, block)")} />
