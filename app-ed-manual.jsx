@@ -117,7 +117,7 @@ function MnStepper({ step, design }) {
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
               <span style={{ width: 26, height: 26, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center",
                 background: done ? eSUCCESS : on ? eMID : "var(--status-neutral-bg)",
-                color: done || on ? "var(--action-text)" : eMUT,
+                color: done ? "var(--on-accent)" : on ? "var(--action-text)" : eMUT,
                 border: done ? "none" : "1px solid " + (on ? eMID : eLINE),
                 fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400 }}>
                 {done ? <I.check size={16} /> : i + 1}
