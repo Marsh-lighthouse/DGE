@@ -988,7 +988,7 @@ function AiAssistant() {
       {open && (
         <div className="ed-aipanel" style={{ position: "fixed", right: 24, bottom: 124, width: 366, maxWidth: "calc(100vw - 48px)", height: 480, maxHeight: "calc(100vh - 150px)", background: "var(--card)", borderRadius: 18, border: "1px solid var(--line)", boxShadow: "0 24px 64px rgba(0,15,71,.24)", zIndex: 71, display: "flex", flexDirection: "column", overflow: "hidden", fontFamily: "var(--sans)" }}>
           <div style={{ background: "var(--surface-deep)", color: "#fff", padding: "15px 17px", display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
-            <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(170,27,23,.16)", color: SKY, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><ChatBubble size={20} /></div>
+            <div style={{ width: 38, height: 38, borderRadius: "50%", background: "color-mix(in srgb, var(--primary) 16%, transparent)", color: "var(--primary)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><ChatBubble size={20} /></div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 15, fontWeight: 700 }}>AI Assistant</div>
               <div style={{ fontSize: 15, color: "rgba(255,255,255,.82)", display: "flex", alignItems: "center", gap: 6 }}><span style={{ width: 7, height: 7, borderRadius: 4, background: "var(--success)" }} /> Online</div>

@@ -16,7 +16,7 @@ const qMID = "var(--primary)", qCANVAS = "var(--canvas)", qINK = "var(--ink)", q
   qLINE = "var(--line)", qCARD = "#fff",
   qBLUE = "var(--accent)",          // self-evaluation step accent
   qPURPLE = "var(--accent)",        // nominate step accent — folded into the brand
-  qPURPLE_BG = "rgba(170,27,23,.08)",
+  qPURPLE_BG = "color-mix(in srgb, var(--primary) 8%, transparent)",
   qGOLD = "var(--action)",          // primary CTA fill
   qGOLDINK = "#CB7E03",             // readable gold text (track step accent)
   qGREEN = "var(--success)", qRED = "var(--danger)",

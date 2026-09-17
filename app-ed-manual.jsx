@@ -117,7 +117,7 @@ function MnStepper({ step, design }) {
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
               <span style={{ width: 26, height: 26, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center",
                 background: done ? eSUCCESS : on ? eMID : "var(--status-neutral-bg)",
-                color: done || on ? "#fff" : eMUT,
+                color: done || on ? "var(--action-text)" : eMUT,
                 border: done ? "none" : "1px solid " + (on ? eMID : eLINE),
                 fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400 }}>
                 {done ? <I.check size={16} /> : i + 1}
@@ -144,7 +144,7 @@ function MnGettingStarted({ onNext }) {
       </p>
 
       <div onClick={() => setWatched(true)} style={{ position: "relative", width: "100%", paddingBottom: "46%", borderRadius: 8, overflow: "hidden", background: "var(--surface-deep)", marginBottom: 24, cursor: "pointer" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 120% at 20% 0%, rgba(170,27,23,.22), transparent 55%), linear-gradient(135deg, var(--surface-deep), color-mix(in srgb, var(--primary) 65%, #000))" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 120% at 20% 0%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 55%), linear-gradient(135deg, var(--surface-deep), color-mix(in srgb, var(--primary) 65%, #000))" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }}>
           {watched ? (
             <div style={{ display: "flex", alignItems: "center", gap: 8, background: "rgba(20,133,61,.92)", padding: "9px 18px", borderRadius: 22 }}>

@@ -38,7 +38,7 @@ function AssessorEditorial() {
   const orange = "#C07A12";
   const warn = "#CB7E03";
   const purple = "var(--accent)";
-  const purpleBg = "rgba(170,27,23,.08)";
+  const purpleBg = "color-mix(in srgb, var(--primary) 8%, transparent)";
   const f = "'Noto Sans','Helvetica Neue',Arial,sans-serif";
   const serif = "'Noto Sans','Helvetica Neue',Arial,sans-serif";  /* Marsh Serif is marketing-only; app uses Noto Sans (MDS). */
 
@@ -1291,7 +1291,7 @@ function AssessorEditorial() {
               <td style={{padding:"16px 18px"}}>
                 <div style={{display:"flex",alignItems:"center",gap:10}}>
                   <div style={{fontSize:14,fontWeight:400,color:tx}}>{r.name}</div>
-                  {r.type==="Main Report" && <span className="tag" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",background:"rgba(170,27,23,.10)",color:teal}}>Main Report</span>}
+                  {r.type==="Main Report" && <span className="tag" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",background:"color-mix(in srgb, var(--primary) 10%, transparent)",color:teal}}>Main Report</span>}
                 </div>
               </td>
               <td style={{padding:"16px 18px"}}><StatusPill s={r.status}/></td>

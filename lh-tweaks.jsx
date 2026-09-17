@@ -216,7 +216,7 @@ function LighthouseTweaks() {
       return;
     }
     if (t.sidebar === "White") {
-      set({ "--rail-bg": "#FFFFFF", "--rail-fg": "var(--primary)", "--rail-icon": "var(--primary)", "--rail-active-bg": "rgba(170,27,23,.08)", "--rail-active-fg": "#000F47", "--rail-active-icon": "var(--accent)", "--rail-group": "#6B6A64", "--rail-border": "rgba(0,15,71,.14)", "--rail-ring-track": "rgba(0,15,71,.16)", "--rail-cta-bg": "#000F47", "--rail-cta-fg": "#ffffff", "--rail-cta-border": "transparent", "--rail-active-line": "rgba(0,15,71,.14)", "--rail-logo-white": "none", "--rail-logo-dark": "block" });
+      set({ "--rail-bg": "#FFFFFF", "--rail-fg": "var(--primary)", "--rail-icon": "var(--primary)", "--rail-active-bg": "color-mix(in srgb, var(--primary) 8%, transparent)", "--rail-active-fg": "#000F47", "--rail-active-icon": "var(--accent)", "--rail-group": "#6B6A64", "--rail-border": "rgba(0,15,71,.14)", "--rail-ring-track": "rgba(0,15,71,.16)", "--rail-cta-bg": "#000F47", "--rail-cta-fg": "#ffffff", "--rail-cta-border": "transparent", "--rail-active-line": "rgba(0,15,71,.14)", "--rail-logo-white": "none", "--rail-logo-dark": "block" });
       return;
     }
     // Midnight preset: rail fill = --primary. Pick a foreground that passes AA on it.

@@ -21,7 +21,7 @@ function idpScrollTop() {
 
 const idpType = {
   "70": { label: "On-the-job (70%)", color: "var(--accent)", bg: "color-mix(in srgb, var(--accent) 10%, transparent)" },
-  "20": { label: "From others (20%)", color: ePURP, bg: "rgba(170,27,23,.10)" },
+  "20": { label: "From others (20%)", color: ePURP, bg: "color-mix(in srgb, var(--primary) 10%, transparent)" },
   "10": { label: "Formal training (10%)", color: eWARN, bg: "rgba(203,126,3,.10)" },
 };
 const idpCatIcon = { experience: "rocket", social: "users", course: "book", reading: "fileText" };
@@ -1262,7 +1262,7 @@ function EdIdpFlow({ onExit, onDone, initialStep, onStep }) {
             if (i === 0) {
               // ── Branded dark cover (page 1) ──
               return (
-                <div key={i} className="ed-report-page" style={{ ...a4, background: "radial-gradient(120% 120% at 15% 0%, rgba(170,27,23,.16), transparent 55%), linear-gradient(150deg, var(--report-cover-a), var(--report-cover-b))", padding: "56px 56px", overflow: "hidden", justifyContent: "space-between" }}>
+                <div key={i} className="ed-report-page" style={{ ...a4, background: "radial-gradient(120% 120% at 15% 0%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 55%), linear-gradient(150deg, var(--report-cover-a), var(--report-cover-b))", padding: "56px 56px", overflow: "hidden", justifyContent: "space-between" }}>
                   <svg viewBox="0 0 43.17 44.26" width="36" height="37" aria-hidden="true" style={{ display: "block" }}>
                     <polygon fill="#fff" points="42.49 0 21.65 30.43 22.2 30.43 35.07 24.39 35.07 44.26 43.17 44.26 43.17 0 42.49 0" />
                     <polygon fill="#fff" points="0 0 0 44.26 8.1 44.26 8.1 24.4 20.9 30.43 21.52 30.43 .68 0 0 0" />
@@ -1312,11 +1312,11 @@ function EdIdpFlow({ onExit, onDone, initialStep, onStep }) {
       {/* Creative chat-assistant section — a live "chat preview" card beside the intro copy.
           (Built from our tokens rather than an external image, so the prototype stays offline-safe.) */}
       <div style={{ display: "flex", gap: 28, alignItems: "stretch", flexWrap: "wrap" }}>
-        <div style={{ flex: "1 1 300px", minWidth: 260, borderRadius: 18, padding: "30px 22px", background: "radial-gradient(120% 120% at 15% 0%, rgba(170,27,23,.16), transparent 55%), linear-gradient(150deg, var(--report-cover-a), var(--report-cover-b))", color: "#fff", position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+        <div style={{ flex: "1 1 300px", minWidth: 260, borderRadius: 18, padding: "30px 22px", background: "radial-gradient(120% 120% at 15% 0%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 55%), linear-gradient(150deg, var(--report-cover-a), var(--report-cover-b))", color: "#fff", position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
           {/* AI-coach illustration (inline SVG, so it works in the offline prototype). */}
           <svg viewBox="0 0 300 232" width="100%" style={{ maxWidth: 300, display: "block" }} aria-hidden="true">
-            <circle cx="150" cy="110" r="92" fill="rgba(170,27,23,.07)" />
-            <circle cx="150" cy="110" r="62" fill="rgba(170,27,23,.11)" />
+            <circle cx="150" cy="110" r="92" fill="color-mix(in srgb, var(--primary) 7%, transparent)" />
+            <circle cx="150" cy="110" r="62" fill="color-mix(in srgb, var(--primary) 11%, transparent)" />
             <circle cx="150" cy="110" r="50" fill="#ffffff" />
             <g transform="translate(108 75) scale(3.5)" fill="var(--surface-deep)"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></g>
             <g>
@@ -1329,10 +1329,10 @@ function EdIdpFlow({ onExit, onDone, initialStep, onStep }) {
               <rect x="43" y="164" width="46" height="6" rx="3" fill="rgba(255,255,255,.5)" />
               <rect x="43" y="176" width="30" height="6" rx="3" fill="rgba(255,255,255,.33)" />
             </g>
-            <g transform="translate(224 112) scale(0.75)" fill="rgba(170,27,23,.9)"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></g>
-            <g transform="translate(64 52) scale(0.5)" fill="rgba(170,27,23,.7)"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></g>
-            <circle cx="250" cy="176" r="4" fill="rgba(170,27,23,.5)" />
-            <circle cx="52" cy="120" r="3" fill="rgba(170,27,23,.45)" />
+            <g transform="translate(224 112) scale(0.75)" fill="color-mix(in srgb, var(--primary) 9%, transparent)"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></g>
+            <g transform="translate(64 52) scale(0.5)" fill="color-mix(in srgb, var(--primary) 7%, transparent)"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></g>
+            <circle cx="250" cy="176" r="4" fill="color-mix(in srgb, var(--primary) 5%, transparent)" />
+            <circle cx="52" cy="120" r="3" fill="color-mix(in srgb, var(--primary) 45%, transparent)" />
           </svg>
           <div style={{ marginTop: 20, fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: "#fff" }}>AI Coach</div>
           <div style={{ marginTop: 3, fontFamily: "var(--sans)", fontSize: 15, color: "rgba(255,255,255,.85)" }}>Your AI-assisted development coach</div>
@@ -1833,7 +1833,7 @@ function EdDevelopmentNew({ onBack, initialMode, idpStep, mnStep, onMode, onStep
       {/* Intro video (system intro-video style) — plays an overview of the IDP,
           then Continue starts the guided flow. */}
       <div onClick={() => setWatched(true)} style={{ position: "relative", width: "100%", paddingBottom: "50%", borderRadius: 16, overflow: "hidden", background: "var(--surface-deep)", marginBottom: 24, cursor: "pointer" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 120% at 20% 0%, rgba(170,27,23,.22), transparent 55%), linear-gradient(135deg, var(--report-cover-a), var(--report-cover-b))" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 120% at 20% 0%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 55%), linear-gradient(135deg, var(--report-cover-a), var(--report-cover-b))" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }}>
           {watched ?
           <div style={{ display: "flex", alignItems: "center", gap: 8, background: "rgba(20,133,61,.92)", padding: "9px 18px", borderRadius: 22 }}>

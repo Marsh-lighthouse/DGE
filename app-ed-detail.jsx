@@ -90,7 +90,7 @@ function EdRow({ item, accent, onClick }) {
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 9, flexWrap: "wrap" }}>
           <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: eMID }}>{item.name}</span>
-          {item.proctored && <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: ePURP, background: "rgba(170,27,23,.10)", padding: "2px 8px", borderRadius: 5, display: "inline-flex", alignItems: "center", gap: 4 }}><I.shield size={12} /> Proctored</span>}
+          {item.proctored && <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: ePURP, background: "color-mix(in srgb, var(--primary) 10%, transparent)", padding: "2px 8px", borderRadius: 5, display: "inline-flex", alignItems: "center", gap: 4 }}><I.shield size={12} /> Proctored</span>}
           {item.hasReport && <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: "var(--accent)", background: "color-mix(in srgb, var(--accent) 15%, var(--card))", padding: "4px 10px", borderRadius: 5 }}>Report ready</span>}
         </div>
         {item.desc && <div style={{ fontFamily: "var(--sans)", fontSize: 15, color: eINK, lineHeight: 1.5, marginTop: 3, maxWidth: 460 }}>{item.desc}</div>}
@@ -209,7 +209,7 @@ function EdInstructions({ prog, watched, onWatch, acked, onContinue, onBack }) {
 
       {/* intro video */}
       <div onClick={onWatch} style={{ position: "relative", width: "100%", paddingBottom: "50%", borderRadius: 16, overflow: "hidden", background: "var(--surface-deep)", marginBottom: 28, cursor: "pointer" }}>
-        <div style={{ position: "absolute", inset: 0, background: `radial-gradient(120% 120% at 20% 0%, ${"rgba(170,27,23,.22)"}, transparent 55%), linear-gradient(135deg, var(--surface-deep), color-mix(in srgb, var(--primary) 65%, #000))` }} />
+        <div style={{ position: "absolute", inset: 0, background: `radial-gradient(120% 120% at 20% 0%, ${"color-mix(in srgb, var(--primary) 22%, transparent)"}, transparent 55%), linear-gradient(135deg, var(--surface-deep), color-mix(in srgb, var(--primary) 65%, #000))` }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }}>
           {watched ?
           <div style={{ display: "flex", alignItems: "center", gap: 8, background: "rgba(20,133,61,.92)", padding: "9px 18px", borderRadius: 22 }}>
@@ -327,7 +327,7 @@ function EdTasks({ prog, onBack, onOpenCenter, onProctored, onOpenAssess, onSche
   // ── hero variants ──
   const heroMidnight =
   <div style={{ background: "var(--surface-deep)", borderRadius: 20, padding: "34px 36px", position: "relative", overflow: "hidden", marginBottom: 40 }}>
-      <div style={{ position: "absolute", top: -50, right: -50, width: 200, height: 200, borderRadius: "50%", background: "rgba(170,27,23,.07)" }} />
+      <div style={{ position: "absolute", top: -50, right: -50, width: 200, height: 200, borderRadius: "50%", background: "color-mix(in srgb, var(--primary) 7%, transparent)" }} />
       <div style={{ position: "relative" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
           <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: "var(--accent)", background: "color-mix(in srgb, var(--accent) 15%, var(--card))", padding: "4px 11px", borderRadius: 6 }}>In progress</span>
@@ -450,7 +450,7 @@ function EdTasks({ prog, onBack, onOpenCenter, onProctored, onOpenAssess, onSche
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 13, flexWrap: "wrap" }}>
           <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: "var(--accent)", background: "color-mix(in srgb, var(--accent) 15%, var(--card))", padding: "5px 12px", borderRadius: 8 }}>{all.length} Total</span>
           <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: "#14853D", background: "color-mix(in srgb, #14853D 15%, var(--card))", padding: "5px 12px", borderRadius: 8 }}>{done} Done</span>
-          <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: ePURP, background: "rgba(170,27,23,.08)", padding: "5px 12px", borderRadius: 8 }}>{prog.pct}% Progress</span>
+          <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: ePURP, background: "color-mix(in srgb, var(--primary) 8%, transparent)", padding: "5px 12px", borderRadius: 8 }}>{prog.pct}% Progress</span>
         </div>
       </div>
     </div>;
@@ -525,7 +525,7 @@ function EdTasks({ prog, onBack, onOpenCenter, onProctored, onOpenAssess, onSche
   // reusable assessment-center callout (same design as the standard single callout)
   const renderCallout = (c, title, mb, locked, done) =>
     <div style={{ margin: "0 0 " + (mb == null ? 24 : mb) + "px", background: done ? "rgba(20,133,61,.05)" : eCARD, border: "1px solid " + (done ? "rgba(20,133,61,.28)" : eLINE), borderRadius: 16, padding: "20px 24px", display: "flex", gap: 18, alignItems: "flex-start", opacity: locked ? 0.62 : 1 }}>
-      <div style={{ width: 44, height: 44, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", background: done ? "rgba(20,133,61,.12)" : locked ? "rgba(123,121,116,.10)" : "rgba(170,27,23,.10)", color: done ? eSUCCESS : locked ? eMUT : ePURP }}>{done ? <I.checkCircle size={22} /> : locked ? <I.lock size={20} /> : <I.users size={22} />}</div>
+      <div style={{ width: 44, height: 44, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", background: done ? "rgba(20,133,61,.12)" : locked ? "rgba(123,121,116,.10)" : "color-mix(in srgb, var(--primary) 10%, transparent)", color: done ? eSUCCESS : locked ? eMUT : ePURP }}>{done ? <I.checkCircle size={22} /> : locked ? <I.lock size={20} /> : <I.users size={22} />}</div>
       <div style={{ flex: 1, minWidth: 0 }}>
         <h2 style={{ fontFamily: "var(--sans)", fontSize: 21, fontWeight: 700, color: eMID, margin: "0 0 4px", letterSpacing: -0.1 }}>{title}</h2>
         <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eINK, lineHeight: 1.5, margin: 0, maxWidth: 600 }}>{done ? "You've completed every activity in this assessment center. Your results are included in your reports." : "You will be added to the assessment center or receive an invite to book your slot. Once you're part of the center, you can complete the activities by clicking the View Detail button."}</p>
@@ -615,7 +615,7 @@ function EdTasks({ prog, onBack, onOpenCenter, onProctored, onOpenAssess, onSche
 
   // "Assessment Center will start in" info card (used in the multiple-centers layout)
   const centerStartCard =
-    <div style={{ display: "flex", gap: 16, alignItems: "flex-start", background: "rgba(170,27,23,.45)", border: "1px solid color-mix(in srgb, var(--accent) 10%, var(--card))", borderRadius: 14, padding: "22px 24px", marginBottom: 24 }}>
+    <div style={{ display: "flex", gap: 16, alignItems: "flex-start", background: "color-mix(in srgb, var(--primary) 45%, transparent)", border: "1px solid color-mix(in srgb, var(--accent) 10%, var(--card))", borderRadius: 14, padding: "22px 24px", marginBottom: 24 }}>
       <div style={{ width: 44, height: 44, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "var(--card)", color: eBLUE }}><I.clock size={22} /></div>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: eMID, marginBottom: 4 }}>Your Assessment Center will start in</div>
@@ -677,7 +677,7 @@ function EdTasks({ prog, onBack, onOpenCenter, onProctored, onOpenAssess, onSche
       {tab === "intro" &&
       <div style={eCOL}>
           <div style={{ position: "relative", width: "100%", paddingBottom: "50%", borderRadius: 16, overflow: "hidden", background: "var(--surface-deep)", marginBottom: 28 }}>
-            <div style={{ position: "absolute", inset: 0, background: `radial-gradient(120% 120% at 20% 0%, rgba(170,27,23,.22), transparent 55%), linear-gradient(135deg, var(--surface-deep), color-mix(in srgb, var(--primary) 65%, #000))` }} />
+            <div style={{ position: "absolute", inset: 0, background: `radial-gradient(120% 120% at 20% 0%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 55%), linear-gradient(135deg, var(--surface-deep), color-mix(in srgb, var(--primary) 65%, #000))` }} />
             <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }}>
               <div style={{ width: 60, height: 60, borderRadius: "50%", background: eSKY, color: "var(--primary)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 28px rgba(0,0,0,.3)" }}><I.play size={24} /></div>
               <span style={{ color: "#fff", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700 }}>Watch introduction video ({d.videoLen})</span>
@@ -2331,7 +2331,7 @@ function LHAssistant() {
       {open && (
         <div style={{ position: "fixed", right: 24, bottom: 124, width: 366, maxWidth: "calc(100vw - 48px)", height: 480, maxHeight: "calc(100vh - 150px)", background: "var(--card)", borderRadius: 18, border: "1px solid var(--line)", boxShadow: "0 24px 64px rgba(0,15,71,.24)", zIndex: 71, display: "flex", flexDirection: "column", overflow: "hidden", fontFamily: "var(--sans)" }}>
           <div style={{ background: "var(--surface-deep)", color: "#fff", padding: "15px 17px", display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
-            <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(170,27,23,.16)", color: eSKY, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><LHSparkle size={20} /></div>
+            <div style={{ width: 38, height: 38, borderRadius: "50%", background: "color-mix(in srgb, var(--primary) 16%, transparent)", color: eSKY, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><LHSparkle size={20} /></div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 15, fontWeight: 700 }}>AI Assistant</div>
               <div style={{ fontSize: 15, color: "rgba(255,255,255,.82)", display: "flex", alignItems: "center", gap: 6 }}><span style={{ width: 7, height: 7, borderRadius: 4, background: "var(--success)" }} /> Online</div>

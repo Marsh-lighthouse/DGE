@@ -100,7 +100,7 @@
     return React.createElement("div", { className: "ne-row", style: Object.assign({ animationDelay: (p.i || 0) * 0.045 + 0.07 + "s" }, p.style) }, p.children);
   }
   function pill(text, tone) {
-    var map = { blue: { bg: "rgba(170,27,23,.10)", fg: TEAL }, green: { bg: "rgba(20,133,61,.11)", fg: GREEN },
+    var map = { blue: { bg: "color-mix(in srgb, var(--primary) 10%, transparent)", fg: TEAL }, green: { bg: "rgba(20,133,61,.11)", fg: GREEN },
       amber: { bg: "rgba(255,191,0,.20)", fg: "#8A6400" }, grey: { bg: "var(--status-neutral-bg)", fg: TM } }[tone || "grey"];
     return React.createElement("span", { style: { display: "inline-block", padding: "2px 7px", borderRadius: 999, background: map.bg, color: map.fg, fontSize: 11.5, fontWeight: 700, whiteSpace: "nowrap" } }, text);
   }
@@ -234,7 +234,7 @@
                 return React.createElement("div", { key: k, style: { flex: col[k + 1], padding: "5px 3px", textAlign: "center", fontFamily: SANS, fontSize: 11.5, fontWeight: 400, color: r.hot ? RED : TX, whiteSpace: "nowrap" } }, v);
               }),
               React.createElement("div", { style: { flex: col[5], padding: "3px 5px", display: "flex", justifyContent: "center" } },
-                React.createElement("span", { style: { minWidth: 28, padding: "3px 5px", borderRadius: 5, border: "1px solid " + (r.hot ? TEAL : BD), background: r.hot ? "rgba(170,27,23,.08)" : "#fff", fontFamily: SANS, fontSize: 11.5, fontWeight: 700, color: NAVY, textAlign: "center" } }, r.fin)));
+                React.createElement("span", { style: { minWidth: 28, padding: "3px 5px", borderRadius: 5, border: "1px solid " + (r.hot ? TEAL : BD), background: r.hot ? "color-mix(in srgb, var(--primary) 8%, transparent)" : "#fff", fontFamily: SANS, fontSize: 11.5, fontWeight: 700, color: NAVY, textAlign: "center" } }, r.fin)));
           })
         ])),
       React.createElement(Row, { i: 6, style: { display: "flex", justifyContent: "flex-end", gap: 6, padding: "7px 12px", borderTop: "1px solid " + BD, background: "rgba(0,15,71,.02)" } },
@@ -324,7 +324,7 @@
             React.createElement("div", { style: { flex: 1, display: "flex", justifyContent: "center" } },
               React.createElement("div", { style: { padding: "2px 12px", borderRadius: 999, background: "rgba(0,15,71,.05)", fontFamily: SANS, fontSize: 11.5, fontWeight: 700, color: TM } }, s.label)),
             React.createElement("span", { style: { width: 7, height: 7 } })),
-          motion === 1 ? React.createElement("div", { key: "sw-" + idx, className: "ne-sweep", style: { position: "absolute", top: 0, bottom: 0, width: "38%", pointerEvents: "none", zIndex: 3, background: "linear-gradient(100deg, transparent, rgba(170,27,23,.09), transparent)" } }) : null,
+          motion === 1 ? React.createElement("div", { key: "sw-" + idx, className: "ne-sweep", style: { position: "absolute", top: 0, bottom: 0, width: "38%", pointerEvents: "none", zIndex: 3, background: "linear-gradient(100deg, transparent, color-mix(in srgb, var(--primary) 9%, transparent), transparent)" } }) : null,
           React.createElement("div", { style: { display: "flex", background: "rgba(0,15,71,.02)", height: frameH } },
             React.createElement("div", { style: { width: 42, flexShrink: 0, background: NAVY, padding: "11px 7px" } },
               [0, 1, 2, 3].map(function (i) {

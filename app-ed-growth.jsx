@@ -10,7 +10,7 @@
 // ── 70/20/10 development-tip styling ──
 const edTipMeta = {
   "70": { label: "On-the-job", color: "var(--accent)", bg: "color-mix(in srgb, var(--accent) 10%, transparent)" },
-  "20": { label: "From others", color: ePURP, bg: "rgba(170,27,23,.10)" },
+  "20": { label: "From others", color: ePURP, bg: "color-mix(in srgb, var(--primary) 10%, transparent)" },
   "10": { label: "Formal training", color: eWARN, bg: "rgba(203,126,3,.10)" },
 };
 
