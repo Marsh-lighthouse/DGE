@@ -56,7 +56,7 @@ html[data-client-brand="generali"] .lg-logo--white { display: none !important; }
 /* CTA buttons: client primaries are fills. Generali red is dark → white text (≈7:1).
    DGE steel is light → white fails AA (~2.7:1), so its button text is dark navy (≈6.6:1). */
 html[data-client-brand="generali"] .lg-btn { color: #FFFFFF; }
-html[data-client-brand="dge"] .lg-btn { color: #000F47; }
+html[data-client-brand="dge"] .lg-btn { color: #1A1A1A; }
 html[data-client-brand="generali"] .lg-spinner { border-color: rgba(255,255,255,.35); border-top-color: #FFFFFF; }
 html[data-client-brand="dge"] .lg-spinner { border-color: rgba(0,15,71,.30); border-top-color: #000F47; }
 
