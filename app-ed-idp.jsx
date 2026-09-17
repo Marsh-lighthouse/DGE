@@ -917,7 +917,7 @@ function IdpWizard({ initial, onBack, onFinish }) {
               <span style={{ color: "var(--action)", display: "flex", flexShrink: 0 }}><I.alertCircle size={18} /></span>
               <span style={{ fontFamily: "var(--sans)", fontSize: 15, color: eMID, whiteSpace: "nowrap" }}>Are you sure you want to discard this chat and start new?</span>
               <button onClick={() => setG3Confirm(false)} style={{ background: "var(--card)", border: "1px solid " + eLINE, borderRadius: 7, padding: "6px 14px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: eMID, cursor: "pointer" }}>No</button>
-              <button onClick={g3Reset} style={{ background: "var(--action)", border: "none", borderRadius: 7, padding: "6px 16px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: "#fff", cursor: "pointer" }}>Yes</button>
+              <button onClick={g3Reset} style={{ background: "var(--action)", border: "none", borderRadius: 7, padding: "6px 16px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, color: "var(--action-text)", cursor: "pointer" }}>Yes</button>
             </div>
           )}
         </div>
@@ -1000,7 +1000,7 @@ function IdpWizard({ initial, onBack, onFinish }) {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0" /><path d="M12 18v3" /></svg>
                 </button>
                 <button onClick={() => g3Send()} title="Send" disabled={!g3Input.trim()}
-                  style={{ width: 38, height: 38, borderRadius: "50%", border: "none", background: !g3Input.trim() ? "color-mix(in srgb, var(--accent) 35%, transparent)" : eBLUE, color: "#fff", cursor: !g3Input.trim() ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  style={{ width: 38, height: 38, borderRadius: "50%", border: "none", background: !g3Input.trim() ? "color-mix(in srgb, var(--accent) 35%, transparent)" : eBLUE, color: "var(--action-text)", cursor: !g3Input.trim() ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19V5" /><path d="M5 12l7-7 7 7" /></svg>
                 </button>
               </div>
@@ -1410,7 +1410,7 @@ function EdIdpFlow({ onExit, onDone, initialStep, onStep }) {
           <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
             <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Or type your own answer…" onKeyDown={(e) => { if (e.key === "Enter" && input.trim()) answer(input.trim(), q); }}
               style={{ flex: 1, padding: "11px 14px", borderRadius: 10, border: "1px solid " + eLINE, background: "var(--card)", color: eINK, fontFamily: "var(--sans)", fontSize: 15, outline: "none" }} />
-            <button onClick={() => input.trim() && answer(input.trim(), q)} disabled={!input.trim()} style={{ width: 44, height: 44, borderRadius: "50%", background: input.trim() ? eMID : "var(--hairline)", color: "#fff", border: "none", cursor: input.trim() ? "pointer" : "default", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.send size={17} /></button>
+            <button onClick={() => input.trim() && answer(input.trim(), q)} disabled={!input.trim()} style={{ width: 44, height: 44, borderRadius: "50%", background: input.trim() ? eMID : "var(--hairline)", color: "var(--action-text)", border: "none", cursor: input.trim() ? "pointer" : "default", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.send size={17} /></button>
           </div>
         )}
         </div>

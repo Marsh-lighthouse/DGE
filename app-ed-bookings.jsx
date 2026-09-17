@@ -178,7 +178,7 @@ function EdBookings() {
         <div style={{ background: kCARD, border: "1px solid " + kLINE, borderRadius: 16, padding: "40px 44px" }}>
           {/* hero */}
           <div style={{ textAlign: "center" }}>
-            <div style={{ width: 60, height: 60, borderRadius: "50%", background: kSUCCESSFILL, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", color: "#fff" }}><I.check size={28} /></div>
+            <div style={{ width: 60, height: 60, borderRadius: "50%", background: kSUCCESSFILL, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", color: "var(--on-accent)" }}><I.check size={28} /></div>
             <h1 className="serif" style={{ fontSize: 28, color: kINK, margin: "0 0 8px", lineHeight: 1.1 }}>You're all set</h1>
             <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: kMUT, margin: "0 auto 4px", maxWidth: 440, lineHeight: 1.5 }}>Your session is booked. We've emailed you and the other attendees a calendar invitation with all the details.</p>
           </div>
@@ -573,7 +573,7 @@ function BkEmpty({ msg }) {
 
 function BkToast({ msg }) {
   return (
-    <div style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", background: kMID, color: "#fff", padding: "12px 20px", borderRadius: 10, boxShadow: "0 10px 30px rgba(0,15,71,.28)", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, zIndex: 300, display: "flex", alignItems: "center", gap: 8 }}>
+    <div style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", background: kMID, color: "var(--action-text)", padding: "12px 20px", borderRadius: 10, boxShadow: "0 10px 30px rgba(0,15,71,.28)", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, zIndex: 300, display: "flex", alignItems: "center", gap: 8 }}>
       <span style={{ color: "#8CE0A8", display: "flex" }}><I.check size={15} /></span> {msg}
     </div>
   );

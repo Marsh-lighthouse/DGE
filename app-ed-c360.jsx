@@ -113,7 +113,7 @@ function EdC360({ prog, onBack, onBuildPlan, countdown, initialStep } = {}) {
   );
 
   const Toast = () => c360ToastMsg ? (
-    <div style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", background: qMID, color: "#fff", padding: "12px 20px", borderRadius: sr, boxShadow: "0 10px 30px rgba(0,15,71,.28)", fontSize: 15, fontWeight: 700, fontFamily: "var(--sans)", display: "flex", alignItems: "center", gap: 8, zIndex: 1000 }}>
+    <div style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", background: qMID, color: "var(--action-text)", padding: "12px 20px", borderRadius: sr, boxShadow: "0 10px 30px rgba(0,15,71,.28)", fontSize: 15, fontWeight: 700, fontFamily: "var(--sans)", display: "flex", alignItems: "center", gap: 8, zIndex: 1000 }}>
       <span style={{ color: "#8CE0A8", display: "flex" }}><QI.Check s={14} /></span> {c360ToastMsg}
     </div>
   ) : null;
@@ -312,7 +312,7 @@ function EdC360({ prog, onBack, onBuildPlan, countdown, initialStep } = {}) {
   if (c360Step === "selfDone") return (
     <div style={{ ...wrap, maxWidth: 640, textAlign: "center", paddingTop: isMob ? 24 : 56 }}>
       <div style={{ background: qCARD, border: "1px solid " + qLINE, borderRadius: cr, padding: isMob ? "32px 22px" : "44px 40px", marginBottom: 24 }}>
-        <div style={{ width: 72, height: 72, margin: "0 auto 24px", borderRadius: "50%", background: qGREEN, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}><QI.Check s={32} /></div>
+        <div style={{ width: 72, height: 72, margin: "0 auto 24px", borderRadius: "50%", background: qGREEN, display: "flex", alignItems: "center", justifyContent: "center", color: "var(--on-accent)" }}><QI.Check s={32} /></div>
         <h1 className="serif" style={{ fontSize: isMob ? 28 : 40, color: qMID, lineHeight: 1.1, margin: "0 0 12px" }}>Self-evaluation submitted.</h1>
         <p style={{ fontSize: 15, color: qINK, fontFamily: "var(--sans)", lineHeight: 1.6, margin: "0 auto", maxWidth: 460 }}>Your {totalSelf} ratings are locked in. Next, nominate the people whose perspective will balance your view.</p>
       </div>
@@ -378,7 +378,7 @@ function EdC360({ prog, onBack, onBuildPlan, countdown, initialStep } = {}) {
                           <div style={{ fontSize: 15, fontWeight: 700, color: qMID, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{cand.name}</div>
                           <div style={{ fontSize: 15, color: qINK, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{cand.role}</div>
                         </div>
-                        <div style={{ width: 20, height: 20, borderRadius: "50%", border: "1px solid " + (picked ? qPURPLE : qLINE), background: picked ? qPURPLE : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#fff" }}>
+                        <div style={{ width: 20, height: 20, borderRadius: "50%", border: "1px solid " + (picked ? qPURPLE : qLINE), background: picked ? qPURPLE : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "var(--action-text)" }}>
                           {picked && <QI.Check s={12} />}
                         </div>
                       </button>

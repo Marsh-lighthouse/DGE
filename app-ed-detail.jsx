@@ -155,7 +155,7 @@ function EdCard({ item, accent, icon, image, segTotal, segDone, onClick }) {
           {item.proctored && <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: "#fff", background: "var(--surface-deep)", padding: "3px 9px", borderRadius: 6, display: "inline-flex", alignItems: "center", gap: 4 }}><I.shield size={12} /> Proctored</span>}
         </div>
         <div style={{ position: "absolute", top: 12, right: 14 }}>
-          {isComplete ? <span style={{ width: 26, height: 26, borderRadius: "var(--lh-radius, 2px)", background: "var(--success-fill)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><I.check size={15} /></span> :
+          {isComplete ? <span style={{ width: 26, height: 26, borderRadius: "var(--lh-radius, 2px)", background: "var(--success-fill)", color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center" }}><I.check size={15} /></span> :
           isError ? <span style={{ width: 26, height: 26, borderRadius: "var(--lh-radius, 2px)", background: "var(--danger-fill)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><I.alertCircle size={15} /></span> :
           locked ? <span style={{ width: 26, height: 26, borderRadius: "var(--lh-radius, 2px)", background: "var(--surface-deep)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><I.lock size={13} /></span> :
           null}
@@ -550,7 +550,7 @@ function EdTasks({ prog, onBack, onOpenCenter, onProctored, onOpenAssess, onSche
       return (
         <div key={c.id} className="ed-center-card" style={{ background: "var(--card)", border: "1px solid " + eLINE, borderRadius: 16, padding: "26px 28px", marginBottom: last ? 30 : 22, boxShadow: "0 1px 3px rgba(0,15,71,.04)" }}>
           <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 18 }}>
-            <div style={{ width: 44, height: 44, borderRadius: "50%", flexShrink: 0, background: "var(--success-fill)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><I.check size={22} /></div>
+            <div style={{ width: 44, height: 44, borderRadius: "50%", flexShrink: 0, background: "var(--success-fill)", color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center" }}><I.check size={22} /></div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 4 }}>
                 <h2 className="serif" style={{ fontSize: 21, color: eMID, lineHeight: 1.15, margin: 0 }}>{c.name}</h2>
@@ -1195,7 +1195,7 @@ function ScScan2({ target, onBack, onLaunch, onStep }) {
         {/* overall status banner */}
         <div style={{ padding: "22px 26px", display: "flex", alignItems: "center", gap: 16, background: bannerBg, transition: "background .3s" }}>
           {!done && <span className="ed-spin" style={{ width: 30, height: 30, borderRadius: 16, border: "3px solid " + scTint(eBLUE, "28%"), borderTopColor: eBLUE, display: "block", flexShrink: 0 }} />}
-          {done && allPass && <span style={{ width: 34, height: 34, borderRadius: "50%", background: eSUCCESS, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.check size={19} /></span>}
+          {done && allPass && <span style={{ width: 34, height: 34, borderRadius: "50%", background: eSUCCESS, color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.check size={19} /></span>}
           {done && anyFail && <span style={{ color: eWARN, display: "flex", flexShrink: 0 }}><I.alertCircle size={32} /></span>}
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: eMID }}>{!done ? "Running system checks…" : allPass ? "You're all set" : "Some checks need attention"}</div>
@@ -1670,7 +1670,7 @@ function ScVideo({ setResult, onBack, onNext, onStep, vertical }) {
       </div>}
 
       {vstate === "pass" && <div style={{ ...scCard, padding: "40px 22px", textAlign: "center", background: scTint(eSUCCESS, "6%"), borderColor: scTint(eSUCCESS, "22%") }}>
-        <div style={{ width: 62, height: 62, borderRadius: "50%", background: eSUCCESS, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 14px" }}><I.check size={30} /></div>
+        <div style={{ width: 62, height: 62, borderRadius: "50%", background: eSUCCESS, color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 14px" }}><I.check size={30} /></div>
         <h3 style={{ fontFamily: "var(--sans)", fontSize: 21, fontWeight: 700, color: eMID, margin: "0 0 6px" }}>Camera and microphone verified</h3>
         <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eINK, margin: 0 }}>Your video and audio are working correctly.</p>
       </div>}
@@ -1960,7 +1960,7 @@ function ScVideoLive({ setResult, onBack, onNext, vertical, panel, embed, onCapt
       {vstate === "checking" && <div style={{ ...scCard, padding: "48px 22px", textAlign: "center" }}><span className="ed-spin" style={{ width: 28, height: 28, borderRadius: "50%", border: "3px solid " + eLINE, borderTopColor: eBLUE, display: "inline-block" }} /><p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eMID, margin: "16px 0 0" }}>Verifying your recording…</p></div>}
 
       {vstate === "pass" && <div style={{ ...scCard, padding: "34px 22px", textAlign: "center", background: scTint(eSUCCESS, "6%"), borderColor: scTint(eSUCCESS, "22%") }}>
-        <div style={{ width: 56, height: 56, borderRadius: "50%", background: eSUCCESS, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}><I.check size={28} /></div>
+        <div style={{ width: 56, height: 56, borderRadius: "50%", background: eSUCCESS, color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}><I.check size={28} /></div>
         <h3 style={{ fontFamily: "var(--sans)", fontSize: 21, fontWeight: 700, color: eMID, margin: "0 0 6px" }}>Camera and microphone verified</h3>
         <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eINK, margin: 0 }}>Your video and audio are working correctly.</p>
       </div>}
@@ -2144,7 +2144,7 @@ function ScAudioLive({ setResult, onBack, onNext, vertical, panel, embed, onCapt
         <div>
           <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 8, minHeight: 24 }}>{(vstate === "ready" || vstate === "recording") && micChip}</div>
           <div style={{ ...scCard, position: "relative", padding: vstate === "recording" ? (mob ? "58px 16px 26px" : "62px 24px 30px") : vstate === "reviewing" ? (mob ? "22px 16px 78px" : "26px 24px 86px") : (mob ? "20px 16px 26px" : "26px 24px 30px"), minHeight: mob ? 230 : 300, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            {vstate === "recording" && <span style={{ position: "absolute", left: 18, top: 16, display: "inline-flex", alignItems: "center", gap: 8, background: scTint(eMID, "88%"), color: "#fff", borderRadius: 8, padding: "5px 11px", fontFamily: "var(--sans)", fontSize: 13, fontWeight: 700 }}><span className="ed-blink" style={{ width: 8, height: 8, borderRadius: "50%", background: eDANGER, display: "inline-block" }} /> REC &middot; {sec}s</span>}
+            {vstate === "recording" && <span style={{ position: "absolute", left: 18, top: 16, display: "inline-flex", alignItems: "center", gap: 8, background: scTint(eMID, "88%"), color: "var(--action-text)", borderRadius: 8, padding: "5px 11px", fontFamily: "var(--sans)", fontSize: 13, fontWeight: 700 }}><span className="ed-blink" style={{ width: 8, height: 8, borderRadius: "50%", background: eDANGER, display: "inline-block" }} /> REC &middot; {sec}s</span>}
             {vstate === "loading" && <div style={{ textAlign: "center" }}><span className="ed-spin" style={{ width: 26, height: 26, borderRadius: "50%", border: "3px solid " + eLINE, borderTopColor: eBLUE, display: "inline-block" }} /><p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eMUT, margin: "14px 0 0" }}>Requesting microphone access…</p></div>}
             {vstate !== "loading" && sentence}
             {vstate === "recording" && <canvas ref={canvasRef} width={640} height={70} style={{ width: "100%", maxWidth: 460, height: mob ? 54 : 70, margin: mob ? "16px auto 0" : "20px auto 0", display: "block" }} />}
@@ -2167,7 +2167,7 @@ function ScAudioLive({ setResult, onBack, onNext, vertical, panel, embed, onCapt
               {[["Access"], ["Uploading"]].map((r, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "13px 16px", borderBottom: i === 0 ? "1px solid " + eLINE : "none" }}>
                   <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: eINK }}>{r[0]}</span>
-                  <span style={{ width: 22, height: 22, borderRadius: "50%", background: eSUCCESS, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.check size={13} /></span>
+                  <span style={{ width: 22, height: 22, borderRadius: "50%", background: eSUCCESS, color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.check size={13} /></span>
                 </div>
               ))}
             </div>

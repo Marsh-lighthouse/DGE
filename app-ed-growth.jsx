@@ -104,7 +104,7 @@ function EdReportCard({ r, onPreview }) {
           : <span style={{ color: eSKY, display: "flex" }}><I.fileText size={38} /></span>}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,15,71,.15) 0%, rgba(0,15,71,0) 45%, rgba(0,15,71,.30) 100%)" }} />
         {r.available
-          ? <span style={{ position: "absolute", top: 10, right: 10, background: "var(--success-fill)", color: "#fff", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, padding: "3px 9px", borderRadius: 5 }}>Available</span>
+          ? <span style={{ position: "absolute", top: 10, right: 10, background: "var(--success-fill)", color: "var(--on-accent)", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, padding: "3px 9px", borderRadius: 5 }}>Available</span>
           : <span style={{ position: "absolute", top: 10, right: 10, background: "rgba(0,0,0,.5)", color: "#fff", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, padding: "3px 9px", borderRadius: 5, display: "inline-flex", alignItems: "center", gap: 4, backdropFilter: "blur(4px)", WebkitBackdropFilter: "blur(4px)" }}><I.lock size={11} /> Locked</span>}
       </div>
       <div style={{ padding: 18, display: "flex", flexDirection: "column", flex: 1 }}>
@@ -780,7 +780,7 @@ function EdScheduling({ onBack, initialCenter, demo, onView }) {
       <div style={{ maxWidth: "var(--content-max)", margin: "36px var(--fol-mx) 72px", padding: 0 }}>
         <div style={{ background: eCARD, border: "1px solid " + eLINE, borderRadius: 18, padding: "40px 36px" }}>
           <div style={{ textAlign: "center", marginBottom: 28 }}>
-            <div style={{ width: 62, height: 62, borderRadius: "50%", background: eSUCCESS, color: "#fff", display: "inline-flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}><I.check size={30} /></div>
+            <div style={{ width: 62, height: 62, borderRadius: "50%", background: eSUCCESS, color: "var(--on-accent)", display: "inline-flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}><I.check size={30} /></div>
             <h1 className="serif" style={{ fontSize: 28, color: eMID, lineHeight: 1.1, margin: "0 0 10px" }}>{doneSlot.justBooked === false ? "Your booking" : "You're all set"}</h1>
             <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eINK, lineHeight: 1.6, margin: "0 auto", maxWidth: 460 }}>{doneSlot.justBooked === false ? "This session is confirmed. You can add it to your calendar, reschedule, or cancel below." : "Your session is booked. We've emailed you and the other attendees a calendar invitation with all the details."}</p>
           </div>
@@ -853,7 +853,7 @@ function EdScheduling({ onBack, initialCenter, demo, onView }) {
                     style={{ display: "flex", alignItems: "center", gap: 14, background: "rgba(20,133,61,.05)", border: "1px solid rgba(20,133,61,.22)", borderRadius: 14, padding: "14px 18px", cursor: "pointer", transition: "background .15s" }}
                     onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(20,133,61,.09)"; }}
                     onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(20,133,61,.05)"; }}>
-                    <div style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--success-fill)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.checkCircle size={19} /></div>
+                    <div style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--success-fill)", color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><I.checkCircle size={19} /></div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: eMID }}>{b.center.name}</div>
                       <div style={{ fontFamily: "var(--sans)", fontSize: 15, color: eMUT }}>{b.slot.date} · {slotTime(b.slot.time)} · {b.center.location}</div>

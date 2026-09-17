@@ -641,14 +641,14 @@ function AssessorEditorial() {
         </div>
         <div style={{position:"relative"}}>
           <button data-tour="profile" onClick={()=>{setProfileOpen(!profileOpen);setLangOpen(false);}} className="btn btn-ghost" style={{padding:"4px 10px 4px 4px",gap:8}}>
-            <div style={{width:28,height:28,borderRadius:"50%",background:teal,color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:f,fontSize:14,fontWeight:700}}>EA</div>
+            <div style={{width:28,height:28,borderRadius:"50%",background:teal,color:"var(--action-text)",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:f,fontSize:14,fontWeight:700}}>EA</div>
             <span style={{fontFamily:f,fontSize:14,fontWeight:700,color:navy}}>Elena Accardi</span>
             <I.Down s={10}/>
           </button>
           {profileOpen && (
             <div style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:card,border:`1px solid ${bd}`,borderRadius:12,boxShadow:`0 12px 40px rgba(0,15,71,.18)`,minWidth:280,padding:6,zIndex:30}}>
               <div style={{display:"flex",alignItems:"center",gap:14,padding:"14px 14px 16px"}}>
-                <div style={{width:52,height:52,borderRadius:8,background:teal,color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:f,fontSize:18,fontWeight:700,flexShrink:0}}>EA</div>
+                <div style={{width:52,height:52,borderRadius:8,background:teal,color:"var(--action-text)",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:f,fontSize:18,fontWeight:700,flexShrink:0}}>EA</div>
                 <div style={{minWidth:0}}>
                   <div style={{fontSize:16,fontWeight:700,color:navy}} className="elide">Elena Accardi</div>
                   <div style={{fontSize:14,color:ts}} className="elide">elena.accardi@marsh.com</div>
@@ -1559,7 +1559,7 @@ function AssessorEditorial() {
               {evalLeftTab === "overview" ? (
                 <div>
                   <div style={{border:`1px solid ${teal}`,borderRadius:br,padding:"18px 20px",display:"flex",alignItems:"center",gap:16,marginBottom:40}}>
-                    <div style={{width:64,height:64,borderRadius:"50%",background:teal,color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.User s={34}/></div>
+                    <div style={{width:64,height:64,borderRadius:"50%",background:teal,color:"var(--action-text)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.User s={34}/></div>
                     <div>
                       <div style={{fontSize:16,fontWeight:700,color:navy,marginBottom:3}}>{c.name}</div>
                       <div style={{fontSize:14,color:tm}}>{c.email}</div>
@@ -1710,7 +1710,7 @@ function AssessorEditorial() {
           <div style={{position:"fixed",bottom:92,right:28,width:352,maxWidth:"calc(100vw - 40px)",maxHeight:"min(560px, calc(100vh - 130px))",background:card,border:`1px solid ${bd}`,borderRadius:12,boxShadow:"0 18px 50px rgba(0,15,71,.22)",zIndex:60,display:"flex",flexDirection:"column",overflow:"hidden"}}>
             {/* Header */}
             <div style={{display:"flex",alignItems:"center",gap:10,padding:"14px 16px",borderBottom:`1px solid ${bd}`,background:bg,flexShrink:0}}>
-              <span style={{width:30,height:30,borderRadius:"50%",background:navy,color:"#fff",display:"inline-flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.Edit s={15}/></span>
+              <span style={{width:30,height:30,borderRadius:"50%",background:navy,color:"var(--action-text)",display:"inline-flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.Edit s={15}/></span>
               <div style={{flex:1,minWidth:0}}>
                 <div style={{fontSize:14,fontWeight:700,color:navy}}>Assessor Notes</div>
               </div>
@@ -1777,7 +1777,7 @@ function AssessorEditorial() {
                   {/* Add row */}
                   <div style={{display:"flex",gap:8,marginBottom:todos.length?14:0}}>
                     <input value={newTodo} onChange={e=>setNewTodo(e.target.value)} onKeyDown={e=>{if(e.key==="Enter")addTodo();}} placeholder="Add a task…" style={{flex:1,minWidth:0,boxSizing:"border-box",border:`1px solid #6F6D68`,borderRadius:8,padding:"9px 11px",fontSize:14,color:navy,fontFamily:f,outline:"none",background:card}} onFocus={e=>e.target.style.borderColor=teal} onBlur={e=>e.target.style.borderColor="#6F6D68"}/>
-                    <button onClick={addTodo} aria-label="Add task" style={{flexShrink:0,width:38,borderRadius:8,border:"none",background:navy,color:"#fff",display:"inline-flex",alignItems:"center",justifyContent:"center",cursor:"pointer"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+                    <button onClick={addTodo} aria-label="Add task" style={{flexShrink:0,width:38,borderRadius:8,border:"none",background:navy,color:"var(--action-text)",display:"inline-flex",alignItems:"center",justifyContent:"center",cursor:"pointer"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
                   </div>
 
                   {todos.length>0 && <div style={{fontSize:14,color:tm,marginBottom:8}} className="tnum">{todos.filter(t=>t.done).length} of {todos.length} done</div>}
@@ -1791,7 +1791,7 @@ function AssessorEditorial() {
                     <div style={{display:"flex",flexDirection:"column",gap:6}}>
                       {todos.map(t => (
                         <div key={t.id} style={{display:"flex",alignItems:"flex-start",gap:9,padding:"9px 10px",border:`1px solid ${bd}`,borderRadius:8,background:t.done?bg:card}}>
-                          <button onClick={()=>toggleTodo(t.id)} aria-label="Toggle task" style={{marginTop:1,flexShrink:0,width:18,height:18,borderRadius:5,border:`1.6px solid ${t.done?teal:bdStrong}`,background:t.done?teal:card,color:"#fff",display:"inline-flex",alignItems:"center",justifyContent:"center",cursor:"pointer"}}>{t.done && <I.Check s={11} style={{color:"#fff",stroke:"#fff"}}/>}</button>
+                          <button onClick={()=>toggleTodo(t.id)} aria-label="Toggle task" style={{marginTop:1,flexShrink:0,width:18,height:18,borderRadius:5,border:`1.6px solid ${t.done?teal:bdStrong}`,background:t.done?teal:card,color:"var(--action-text)",display:"inline-flex",alignItems:"center",justifyContent:"center",cursor:"pointer"}}>{t.done && <I.Check s={11} style={{color:"var(--action-text)",stroke:"var(--action-text)"}}/>}</button>
                           <span style={{flex:1,fontSize:14,lineHeight:1.5,color:t.done?tm:tx,textDecoration:t.done?"line-through":"none",wordBreak:"break-word"}}>{t.text}</span>
                           <button onClick={()=>removeTodo(t.id)} aria-label="Delete task" style={{flexShrink:0,width:22,height:22,borderRadius:5,border:"none",background:"transparent",color:tf,display:"inline-flex",alignItems:"center",justifyContent:"center",cursor:"pointer"}} onMouseEnter={e=>{e.currentTarget.style.color=red;e.currentTarget.style.background=`${red}12`;}} onMouseLeave={e=>{e.currentTarget.style.color=tf;e.currentTarget.style.background="transparent";}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
                         </div>
@@ -1806,9 +1806,9 @@ function AssessorEditorial() {
         )}
 
         {/* Pencil FAB */}
-        <button onClick={()=>setNotesOpen(o=>!o)} aria-label="Assessor notes" title="Notes & to-do" style={{position:"fixed",bottom:28,right:28,width:54,height:54,borderRadius:"50%",border:"none",background:notesOpen?teal:navy,color:"#fff",display:"inline-flex",alignItems:"center",justifyContent:"center",cursor:"pointer",boxShadow:"0 8px 24px rgba(0,15,71,.28)",zIndex:60,transition:"background .18s, transform .18s"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.06)"} onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}>
+        <button onClick={()=>setNotesOpen(o=>!o)} aria-label="Assessor notes" title="Notes & to-do" style={{position:"fixed",bottom:28,right:28,width:54,height:54,borderRadius:"50%",border:"none",background:notesOpen?teal:navy,color:"var(--action-text)",display:"inline-flex",alignItems:"center",justifyContent:"center",cursor:"pointer",boxShadow:"0 8px 24px rgba(0,15,71,.28)",zIndex:60,transition:"background .18s, transform .18s"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.06)"} onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}>
           {notesOpen ? <I.X s={20}/> : <I.Edit s={21}/>}
-          {!notesOpen && (notes.length+todos.length)>0 && <span className="tnum" style={{position:"absolute",top:-3,right:-3,minWidth:20,height:20,padding:"0 5px",boxSizing:"border-box",borderRadius:10,background:gold,color:"#fff",fontSize:14,fontWeight:700,display:"inline-flex",alignItems:"center",justifyContent:"center",border:`2px solid ${bg}`}}>{notes.length+todos.length}</span>}
+          {!notesOpen && (notes.length+todos.length)>0 && <span className="tnum" style={{position:"absolute",top:-3,right:-3,minWidth:20,height:20,padding:"0 5px",boxSizing:"border-box",borderRadius:10,background:gold,color:"var(--action-text)",fontSize:14,fontWeight:700,display:"inline-flex",alignItems:"center",justifyContent:"center",border:`2px solid ${bg}`}}>{notes.length+todos.length}</span>}
         </button>
       </div>
     );
@@ -2122,12 +2122,12 @@ function AssessorEditorial() {
             <div style={{padding:"24px 32px 32px"}}>
               {/* Floating preview switcher (demo aid) — number of assessors; collapses to an edge tab */}
               {!previewOpen ? (
-                <button onClick={()=>setPreviewOpen(true)} title="Preview: assessors per exercise" style={{position:"fixed",right:railW+16,bottom:84,zIndex:60,background:navy,color:"#fff",border:"none",borderRadius:8,boxShadow:"0 6px 22px rgba(0,15,71,.26)",padding:"10px 14px",display:"flex",alignItems:"center",gap:8,cursor:"pointer"}}>
+                <button onClick={()=>setPreviewOpen(true)} title="Preview: assessors per exercise" style={{position:"fixed",right:railW+16,bottom:84,zIndex:60,background:navy,color:"var(--action-text)",border:"none",borderRadius:8,boxShadow:"0 6px 22px rgba(0,15,71,.26)",padding:"10px 14px",display:"flex",alignItems:"center",gap:8,cursor:"pointer"}}>
                   <I.Gear s={15}/>
                   <span style={{fontSize:14,fontWeight: 400,letterSpacing:.3}}>Preview · {numAssessors}</span>
                 </button>
               ) : (
-                <div style={{position:"fixed",right:railW+16,bottom:84,zIndex:60,background:navy,color:"#fff",borderRadius:10,boxShadow:"0 8px 30px rgba(0,15,71,.28)",padding:"12px 14px 14px 16px",width:154}}>
+                <div style={{position:"fixed",right:railW+16,bottom:84,zIndex:60,background:navy,color:"var(--action-text)",borderRadius:10,boxShadow:"0 8px 30px rgba(0,15,71,.28)",padding:"12px 14px 14px 16px",width:154}}>
                   <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:3}}>
                     <span style={{display:"flex",alignItems:"center",gap:6,fontSize:14,fontWeight: 400,letterSpacing:0,opacity:.85}}><I.Gear s={12}/> Preview</span>
                     <button onClick={()=>setPreviewOpen(false)} title="Hide" style={{marginLeft:"auto",color:"#fff",opacity:.7,padding:2,display:"inline-flex",cursor:"pointer"}}><I.X s={13}/></button>
@@ -2135,7 +2135,7 @@ function AssessorEditorial() {
                   <div style={{fontSize:14,opacity:.6,marginBottom:10,lineHeight:1.35}}>How the matrix looks with N assessors</div>
                   <div style={{display:"flex",flexDirection:"column",gap:6}}>
                     {[1,2,3,4].map(n => (
-                      <button key={n} onClick={()=>setNumAssessors(n)} style={{display:"flex",alignItems:"center",gap:8,padding:"8px 10px",borderRadius:6,fontSize:14,fontWeight:n===numAssessors?700:500,textAlign:"left",cursor:"pointer",color:"#fff",background:n===numAssessors?gold:"rgba(255,255,255,.08)",border:`1px solid ${n===numAssessors?gold:"rgba(255,255,255,.14)"}`,transition:"all .12s"}}>
+                      <button key={n} onClick={()=>setNumAssessors(n)} style={{display:"flex",alignItems:"center",gap:8,padding:"8px 10px",borderRadius:6,fontSize:14,fontWeight:n===numAssessors?700:500,textAlign:"left",cursor:"pointer",color:"var(--action-text)",background:n===numAssessors?gold:"rgba(255,255,255,.08)",border:`1px solid ${n===numAssessors?gold:"rgba(255,255,255,.14)"}`,transition:"all .12s"}}>
                         <span style={{width:14,display:"inline-flex"}}>{n===numAssessors ? <I.Check s={13}/> : null}</span>
                         {`${n} assessor${n>1?"s":""}`}
                       </button>
@@ -2143,7 +2143,7 @@ function AssessorEditorial() {
                   </div>
                   <div style={{height:1,background:"rgba(255,255,255,.14)",margin:"12px 0 10px"}}/>
                   <div style={{fontSize:14,fontWeight: 400,letterSpacing:0,opacity:.85,marginBottom:8}}>Number style</div>
-                  <button onClick={()=>setPlainNumbers(v=>!v)} style={{display:"flex",alignItems:"flex-start",gap:8,padding:"8px 10px",borderRadius:6,fontSize:14,fontWeight:plainNumbers?700:500,textAlign:"left",cursor:"pointer",color:"#fff",background:plainNumbers?gold:"rgba(255,255,255,.08)",border:`1px solid ${plainNumbers?gold:"rgba(255,255,255,.14)"}`,transition:"all .12s",lineHeight:1.3}}>
+                  <button onClick={()=>setPlainNumbers(v=>!v)} style={{display:"flex",alignItems:"flex-start",gap:8,padding:"8px 10px",borderRadius:6,fontSize:14,fontWeight:plainNumbers?700:500,textAlign:"left",cursor:"pointer",color:"var(--action-text)",background:plainNumbers?gold:"rgba(255,255,255,.08)",border:`1px solid ${plainNumbers?gold:"rgba(255,255,255,.14)"}`,transition:"all .12s",lineHeight:1.3}}>
                     <span style={{width:14,display:"inline-flex",flexShrink:0,marginTop:1}}>{plainNumbers ? <I.Check s={13}/> : null}</span>
                     Numbers without background
                   </button>
@@ -2168,7 +2168,7 @@ function AssessorEditorial() {
                         const on = !hiddenForms.has(fi);
                         return (
                           <label key={af.short} style={{display:"flex",alignItems:"center",gap:10,padding:"9px 14px",fontSize:14,color:tx,cursor:"pointer"}}>
-                            <span onClick={()=>toggleForm(fi)} style={{width:15,height:15,borderRadius:2,border:`1.5px solid ${on?navy:bdStrong}`,background:on?navy:"transparent",display:"inline-flex",alignItems:"center",justifyContent:"center",color:"#fff",flexShrink:0}}>{on ? <I.Check s={11}/> : null}</span>
+                            <span onClick={()=>toggleForm(fi)} style={{width:15,height:15,borderRadius:2,border:`1.5px solid ${on?navy:bdStrong}`,background:on?navy:"transparent",display:"inline-flex",alignItems:"center",justifyContent:"center",color:"var(--action-text)",flexShrink:0}}>{on ? <I.Check s={11}/> : null}</span>
                             <span onClick={()=>toggleForm(fi)} className="elide" style={{flex:1}}>{af.name}</span>
                           </label>
                         );
@@ -2214,7 +2214,7 @@ function AssessorEditorial() {
                       <th rowSpan={numAssessors>1?2:1} style={{position:"sticky",right:finalColW,top:0,zIndex:5,background:sbBg,color:navy,padding:"12px 10px",textAlign:"center",fontSize:14,fontWeight: 400,letterSpacing:0,textTransform:"none",borderLeft:`1px solid ${bd}`,borderBottom:`1px solid ${bd}`,width:avgColW,minWidth:avgColW}}>
                         Average
                       </th>
-                      <th rowSpan={numAssessors>1?2:1} style={{position:"sticky",right:0,top:0,zIndex:5,background:navy,color:"#fff",padding:"12px 10px",textAlign:"center",fontSize:14,fontWeight: 400,letterSpacing:0,textTransform:"none",borderLeft:`2px solid ${navy}`,width:finalColW,minWidth:finalColW}}>
+                      <th rowSpan={numAssessors>1?2:1} style={{position:"sticky",right:0,top:0,zIndex:5,background:navy,color:"var(--action-text)",padding:"12px 10px",textAlign:"center",fontSize:14,fontWeight: 400,letterSpacing:0,textTransform:"none",borderLeft:`2px solid ${navy}`,width:finalColW,minWidth:finalColW}}>
                         Final
                       </th>
                     </tr>
@@ -2660,7 +2660,7 @@ function AssessorEditorial() {
                       const on = !hiddenCols[col.k];
                       return (
                         <label key={col.k} onClick={()=>setHiddenCols(p=>({...p,[col.k]:on}))} style={{display:"flex",alignItems:"center",gap:10,padding:"9px 14px",fontSize:14,color:tx,cursor:"pointer"}}>
-                          <span style={{width:15,height:15,borderRadius:2,border:`1.5px solid ${on?navy:bdStrong}`,background:on?navy:"transparent",display:"inline-flex",alignItems:"center",justifyContent:"center",color:"#fff",flexShrink:0}}>{on ? <I.Check s={11}/> : null}</span>
+                          <span style={{width:15,height:15,borderRadius:2,border:`1.5px solid ${on?navy:bdStrong}`,background:on?navy:"transparent",display:"inline-flex",alignItems:"center",justifyContent:"center",color:"var(--action-text)",flexShrink:0}}>{on ? <I.Check s={11}/> : null}</span>
                           <span style={{flex:1}}>{col.title}</span>
                         </label>
                       );
@@ -2689,7 +2689,7 @@ function AssessorEditorial() {
       <div style={{padding:"22px 26px"}}>
         {/* Header card */}
         <div style={{display:"flex",alignItems:"center",gap:18,flexWrap:"wrap",background:bg,border:`1px solid ${bd}`,borderRadius:br,padding:"18px 20px",marginBottom:18}}>
-          <div style={{width:60,height:60,borderRadius:ir,background:teal,color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.User s={26}/></div>
+          <div style={{width:60,height:60,borderRadius:ir,background:teal,color:"var(--action-text)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.User s={26}/></div>
           <div style={{minWidth:180}}>
             <div style={{fontSize:16,fontWeight:700,color:navy,letterSpacing:-.2}}>{candidate.name}</div>
             <div style={{fontSize:14,color:tm,margin:"2px 0 8px"}}>{candidate.email}</div>
@@ -3555,7 +3555,7 @@ function AssessorEditorial() {
             ))}
           </div>
         )}
-        <button onClick={()=>setSampleMenuOpen(v=>!v)} title="Dashboard layouts" style={{width:52,height:52,borderRadius:"50%",background:navy,color:"#fff",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",boxShadow:"0 10px 30px rgba(0,15,71,.30)"}}><I.Dash s={20}/></button>
+        <button onClick={()=>setSampleMenuOpen(v=>!v)} title="Dashboard layouts" style={{width:52,height:52,borderRadius:"50%",background:navy,color:"var(--action-text)",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",boxShadow:"0 10px 30px rgba(0,15,71,.30)"}}><I.Dash s={20}/></button>
       </div>
     );
     const Sample2 = () => (
@@ -3884,7 +3884,7 @@ function AssessorEditorial() {
       <div onClick={onClose} style={{position:"fixed",inset:0,zIndex:200,background:"rgba(0,15,71,.55)",backdropFilter:"blur(4px)",display:"flex",alignItems:"center",justifyContent:"center",padding:28}}>
         <div onClick={e=>e.stopPropagation()} style={{background:card,borderRadius:18,width:"100%",height:"100%",maxWidth:1400,display:"flex",flexDirection:"column",overflow:"hidden",boxShadow:"0 30px 80px rgba(0,15,71,.4)"}}>
           <div style={{display:"flex",alignItems:"center",gap:14,padding:"16px 22px",borderBottom:`1px solid ${bd}`,flexShrink:0}}>
-            <div style={{width:38,height:38,borderRadius:"50%",background:navy,color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.Report s={18}/></div>
+            <div style={{width:38,height:38,borderRadius:"50%",background:navy,color:"var(--action-text)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><I.Report s={18}/></div>
             <div style={{flex:1,minWidth:0}}>
               <div className="elide" style={{fontSize:16,fontWeight:700,color:navy}}>{report.name}</div>
               <div style={{fontSize:14,color:tm}}>Page {page+1} of {pages}</div>
@@ -3948,11 +3948,11 @@ function AssessorEditorial() {
               ))}
             </div>
           )}
-          <button onClick={()=>setSampleMenuOpen(v=>!v)} title="Dashboard layouts" style={{width:52,height:52,borderRadius:"50%",background:navy,color:"#fff",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",boxShadow:"0 10px 30px rgba(0,15,71,.30)"}}><I.Dash s={20}/></button>
+          <button onClick={()=>setSampleMenuOpen(v=>!v)} title="Dashboard layouts" style={{width:52,height:52,borderRadius:"50%",background:navy,color:"var(--action-text)",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",boxShadow:"0 10px 30px rgba(0,15,71,.30)"}}><I.Dash s={20}/></button>
         </div>
       )}
       {toast && (
-        <div className="an" style={{position:"fixed",bottom:24,left:"50%",transform:"translateX(-50%)",background:navy,color:"#fff",padding:"12px 20px",borderRadius:br,fontSize:14,fontWeight:400,boxShadow:"0 8px 32px rgba(0,0,0,.2)",zIndex:1000,display:"flex",alignItems:"center",gap:10}}>
+        <div className="an" style={{position:"fixed",bottom:24,left:"50%",transform:"translateX(-50%)",background:navy,color:"var(--action-text)",padding:"12px 20px",borderRadius:br,fontSize:14,fontWeight:400,boxShadow:"0 8px 32px rgba(0,0,0,.2)",zIndex:1000,display:"flex",alignItems:"center",gap:10}}>
           <I.Check s={14} style={{color:"#4ADE80"}}/> {toast}
         </div>
       )}

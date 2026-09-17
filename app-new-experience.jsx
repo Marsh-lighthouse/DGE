@@ -141,7 +141,7 @@
           React.createElement("div", { style: { fontFamily: SERIF, fontSize: 15, color: NAVY, lineHeight: 1.1 } }, "Lukas Weber"),
           React.createElement("div", { style: { fontFamily: SANS, fontSize: 11.5, color: TM, marginTop: 2 } }, "l.weber@tte.email · Generali DGE 2026")),
         React.createElement("span", { style: { fontFamily: SANS, fontSize: 11.5, fontWeight: 700, color: NAVY, border: "1px solid " + BD, borderRadius: 6, padding: "5px 10px", background: "#fff" } }, "Evaluate"),
-        React.createElement("span", { style: { fontFamily: SANS, fontSize: 11.5, fontWeight: 700, color: "#fff", borderRadius: 6, padding: "5px 10px", background: NAVY } }, "Moderate scores")),
+        React.createElement("span", { style: { fontFamily: SANS, fontSize: 11.5, fontWeight: 700, color: "var(--action-text)", borderRadius: 6, padding: "5px 10px", background: NAVY } }, "Moderate scores")),
       React.createElement(Row, { i: 2 }, tabs(["Assessments", "Timeline", "Documents"], 0)),
       card(
         [React.createElement("div", { key: "h", className: "ne-row", style: { display: "flex", padding: "6px 10px", borderBottom: "1px solid " + BD, animationDelay: ".16s" } },

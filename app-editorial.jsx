@@ -214,7 +214,7 @@ function EdUserMenuCollapsed({ onNav, user }) {
           <div onClick={() => setOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 1000 }} />
           <div style={{ position: "fixed", bottom: pos.bottom, left: pos.left, right: pos.right, width: 224, background: "var(--card)", border: "1px solid var(--line)", borderRadius: 12, boxShadow: "0 14px 40px rgba(0,15,71,.18)", zIndex: 1001, overflow: "hidden", fontFamily: "var(--sans)" }}>
             <div style={{ padding: "13px 15px", borderBottom: "1px solid var(--line)", display: "flex", alignItems: "center", gap: 11 }}>
-              <span style={{ width: 38, height: 38, borderRadius: "50%", background: MID, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: 15, flexShrink: 0 }}>{U.initials}</span>
+              <span style={{ width: 38, height: 38, borderRadius: "50%", background: MID, color: "var(--action-text)", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: 15, flexShrink: 0 }}>{U.initials}</span>
               <div style={{ minWidth: 0 }}>
                 <div style={{ fontSize: 15, fontWeight: 700, color: MID }}>{U.first} {U.last}</div>
               </div>

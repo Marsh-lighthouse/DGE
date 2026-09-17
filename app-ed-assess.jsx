@@ -164,7 +164,7 @@ function EdConsent({ exercise, onAccept, onExit }) {
         <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eINK, lineHeight: 1.65, margin: "0 0 24px" }}>For more information about how we process your personal information, please <span onClick={() => setShowPrivacy(true)} style={{ color: eBLUE, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>read our global privacy notice</span>.</p>
         <label htmlFor="ed-consent-box" style={{ display: "flex", gap: 12, alignItems: "flex-start", cursor: "pointer", background: eCREAM, border: "1px solid " + eLINE, borderRadius: 12, padding: "16px 18px", marginBottom: 24 }}>
           <input id="ed-consent-box" type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} style={{ position: "absolute", opacity: 0, width: 1, height: 1 }} />
-          <span style={{ width: 22, height: 22, flexShrink: 0, borderRadius: 2, border: "1.5px solid " + (agreed ? "var(--primary)" : "var(--control-line)"), background: agreed ? "var(--primary)" : "var(--card)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1, transition: "background .12s, border-color .12s" }}>{agreed && <I.check size={14} />}</span>
+          <span style={{ width: 22, height: 22, flexShrink: 0, borderRadius: 2, border: "1.5px solid " + (agreed ? "var(--primary)" : "var(--control-line)"), background: agreed ? "var(--primary)" : "var(--card)", color: "var(--action-text)", display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1, transition: "background .12s, border-color .12s" }}>{agreed && <I.check size={14} />}</span>
           <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: eMID, lineHeight: 1.5 }}>By checking this box, you agree that you have read our privacy notice and consent to the collection and processing of your personal information as described therein, including the international transfer of your personal information.</span>
         </label>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -219,7 +219,7 @@ function OaMediaResponse({ audioOnly, maxDuration, value, onChange }) {
   if (value) {
     return (
       <div style={{ background: eCARD, border: "1px solid " + eLINE, borderRadius: R, padding: 20, textAlign: "center" }}>
-        <div style={{ width: 52, height: 52, borderRadius: "50%", background: "var(--success-fill)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 10px" }}><I.check size={24} /></div>
+        <div style={{ width: 52, height: 52, borderRadius: "50%", background: "var(--success-fill)", color: "var(--on-accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 10px" }}><I.check size={24} /></div>
         <div style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: eMID }}>{audioOnly ? "Audio" : "Video"} response recorded</div>
         <div style={{ fontFamily: "var(--sans)", fontSize: 13, color: eMUT, marginTop: 4 }}>Your response has been captured.</div>
         <button onClick={() => onChange(undefined)} style={{ marginTop: 14, display: "inline-flex", alignItems: "center", gap: 7, padding: "8px 18px", borderRadius: R, border: "1px solid rgba(197,53,50,.35)", background: "none", color: eDANGER, cursor: "pointer", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 600 }}><I.sync size={14} /> Re-record</button>
@@ -315,7 +315,7 @@ function OaQuestionCard({ q, number, value, onChange, error, hidePrompt, narrow 
               const sel = isSel(oi);
               return (
                 <button key={oi} onClick={() => toggle(oi)} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "14px 16px", borderRadius: 12, border: "1.5px solid " + (sel ? eBLUE : eLINE), background: sel ? "color-mix(in srgb, var(--accent) 5%, transparent)" : eCARD, cursor: "pointer", textAlign: "left", width: "100%", transition: "all .15s" }}>
-                  <div style={{ width: 20, height: 20, borderRadius: multi ? 5 : "50%", border: "2px solid " + (sel ? eGOLD : "var(--control-line)"), background: sel ? eGOLD : "transparent", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{multi ? (sel && <I.check size={13} />) : (sel && <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--on-accent)" }} />)}</div>
+                  <div style={{ width: 20, height: 20, borderRadius: multi ? 5 : "50%", border: "2px solid " + (sel ? eGOLD : "var(--control-line)"), background: sel ? eGOLD : "transparent", color: "var(--action-text)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{multi ? (sel && <I.check size={13} />) : (sel && <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--on-accent)" }} />)}</div>
                   <span style={{ fontFamily: "var(--sans)", fontSize: 15, color: sel ? eMID : eINK, fontWeight: 400, lineHeight: 1.45 }}>{opt}</span>
                 </button>);
             })}
@@ -454,7 +454,7 @@ function OaQuestionCard({ q, number, value, onChange, error, hidePrompt, narrow 
               <select defaultValue="Mine" style={{ ...oaSelectStyle, height: 38, padding: "0 34px 0 12px", border: "1px solid var(--field-line)", borderRadius: 8, backgroundColor: "#fff", backgroundImage: oaSelectStyle.backgroundImage, backgroundRepeat: "no-repeat", backgroundPosition: "right 12px center", color: eINK, fontFamily: "var(--sans)", fontSize: 15, outline: "none", flexShrink: 0 }}>
                 {["Mine", "Shared with team"].map((o) => <option key={o}>{o}</option>)}
               </select>
-              <button onClick={send} aria-label="Send" style={{ width: 40, height: 40, flexShrink: 0, borderRadius: "50%", border: "none", background: green, color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}><I.send size={16} /></button>
+              <button onClick={send} aria-label="Send" style={{ width: 40, height: 40, flexShrink: 0, borderRadius: "50%", border: "none", background: green, color: "var(--action-text)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}><I.send size={16} /></button>
             </div>
           </div>
         );
@@ -1825,7 +1825,7 @@ function EdOpenAssess({ exercise, onExit, onBack, onNext, hasNext, nextEx, initi
   if (step === "complete") return (
     <div style={{ width: "100%", flex: "1 1 auto", minHeight: "100vh", background: eCREAM, display: "flex", alignItems: "center", justifyContent: "center", padding: 40 }}>
       <div style={{ textAlign: "center", maxWidth: 480, background: eCARD, border: "1px solid " + eLINE, borderRadius: 20, padding: "52px 44px", boxShadow: "0 12px 40px rgba(0,15,71,.08)" }}>
-        <div style={{ width: 72, height: 72, borderRadius: "50%", background: "var(--success-fill)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", boxShadow: "0 8px 28px rgba(20,133,61,.3)", color: "#fff" }}><I.check size={34} /></div>
+        <div style={{ width: 72, height: 72, borderRadius: "50%", background: "var(--success-fill)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", boxShadow: "0 8px 28px rgba(20,133,61,.3)", color: "var(--on-accent)" }}><I.check size={34} /></div>
         <h1 className="serif" style={{ fontSize: 28, color: eMID, lineHeight: 1.08, margin: "0 0 10px" }}>Task complete</h1>
         <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: eINK, lineHeight: 1.6, margin: "0 0 28px" }}>Your response has been saved.</p>
         {hasNext && nextEx ? (
