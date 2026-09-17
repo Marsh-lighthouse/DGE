@@ -1676,7 +1676,7 @@ function OaQuestionCard({ q, number, value, onChange, error, hidePrompt, narrow 
                     ? <img src={c.img} alt={c.alt || ""} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                     : <div style={{ position: "absolute", inset: 0 }} dangerouslySetInnerHTML={{ __html: c.svg }} />}
                   {on &&
-                    <span style={{ position: "absolute", top: 10, right: 10, width: 26, height: 26, borderRadius: "var(--lh-radius, 2px)", background: "var(--action)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,0,0,.25)" }}><I.check size={15} /></span>
+                    <span style={{ position: "absolute", top: 10, right: 10, width: 26, height: 26, borderRadius: "var(--lh-radius, 2px)", background: "var(--action)", color: "var(--action-text)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,0,0,.25)" }}><I.check size={15} /></span>
                   }
                 </button>
               );
@@ -1894,7 +1894,7 @@ function EdOpenAssess({ exercise, onExit, onBack, onNext, hasNext, nextEx, initi
                 </div>
                 {qIdx < total - 1 ?
                   <EdBtn primary onClick={() => { if (validate([curQ])) setQIdx(qIdx + 1); }}>Next <I.arrow size={16} /></EdBtn> :
-                  <button onClick={() => { if (validate([curQ])) setStep("complete"); }} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, background: eGOLD, color: "#fff", border: "none", borderRadius: 10, padding: "12px 26px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>Submit <I.check size={16} /></button>
+                  <button onClick={() => { if (validate([curQ])) setStep("complete"); }} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, background: eGOLD, color: "var(--action-text)", border: "none", borderRadius: 10, padding: "12px 26px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>Submit <I.check size={16} /></button>
                 }
               </div>
             </div>
@@ -1946,7 +1946,7 @@ function EdOpenAssess({ exercise, onExit, onBack, onNext, hasNext, nextEx, initi
             </div>
             {page < pages - 1 ?
               <EdBtn primary onClick={() => { if (validate(pageItems)) setPage(page + 1); }}>Next <I.arrow size={16} /></EdBtn> :
-              <button onClick={() => { if (validate(pageItems)) setStep("complete"); }} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, background: eGOLD, color: "#fff", border: "none", borderRadius: 10, padding: "12px 26px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>Submit <I.check size={16} /></button>
+              <button onClick={() => { if (validate(pageItems)) setStep("complete"); }} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, background: eGOLD, color: "var(--action-text)", border: "none", borderRadius: 10, padding: "12px 26px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>Submit <I.check size={16} /></button>
             }
           </div>
         </div>

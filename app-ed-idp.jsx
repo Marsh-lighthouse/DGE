@@ -909,7 +909,7 @@ function IdpWizard({ initial, onBack, onFinish }) {
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 2.6-6.4" /><path d="M3 4v5h5" /></svg> Reset Chat
           </button>
           <button onClick={() => onFinish(a, true)}
-            style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "var(--action)", color: "#fff", border: "none", borderRadius: 8, padding: "11px 17px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+            style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "var(--action)", color: "var(--action-text)", border: "none", borderRadius: 8, padding: "11px 17px", fontFamily: "var(--sans)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
             <I.check size={16} /> Yes, proceed with plan creation
           </button>
           {g3Confirm && (
