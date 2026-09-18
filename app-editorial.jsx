@@ -92,8 +92,8 @@ function EdRail({ activeId, onNav, collapsed, onToggle, items, showAccount = tru
     const cb = (typeof window !== "undefined" && window.LHBrand && window.LHBrand.current() !== "marsh") ? window.LHBrand.get() : null;
     if (cb) {
       const isDgeIcon = cb.id === "dge" && icon;
-      const iconMax = isDgeIcon ? 52 : 56;
-      const h = icon ? (isDgeIcon ? 52 : cb.railIconH) : cb.railLogoH;
+      const iconMax = isDgeIcon ? 46 : 56;
+      const h = icon ? (isDgeIcon ? 46 : cb.railIconH) : cb.railLogoH;
       const st = (disp) => ({ height: h, width: "auto", maxWidth: icon ? iconMax : 168, objectFit: "contain", display: disp, marginRight: icon ? 0 : "auto" });
       // Two variants; the active rail palette toggles via --rail-logo-white / --rail-logo-dark.
       // DGE collapsed: white outline emblem on the dark rail, colour emblem on the light steel rail.
