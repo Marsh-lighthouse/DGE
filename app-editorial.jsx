@@ -94,7 +94,7 @@ function EdRail({ activeId, onNav, collapsed, onToggle, items, showAccount = tru
       const isDgeIcon = cb.id === "dge" && icon;
       const iconMax = isDgeIcon ? 46 : 56;
       const h = icon ? (isDgeIcon ? 46 : cb.railIconH) : cb.railLogoH;
-      const st = (disp) => ({ height: h, width: "auto", maxWidth: icon ? iconMax : 200, objectFit: "contain", display: disp, marginRight: icon ? 0 : "auto" });
+      const st = (disp) => ({ height: h, width: "auto", maxWidth: icon ? iconMax : 200, objectFit: "contain", display: disp, marginRight: 0 });
       // Two variants; the active rail palette toggles via --rail-logo-white / --rail-logo-dark.
       // DGE collapsed: white outline emblem on the dark rail, colour emblem on the light steel rail.
       return (
@@ -112,7 +112,7 @@ function EdRail({ activeId, onNav, collapsed, onToggle, items, showAccount = tru
   );};
   return (
     <aside className="ed-rail" style={{ width: W, minWidth: W, maxWidth: W, flexShrink: 0, height: "100%", overflowY: "auto", overflowX: "hidden", background: "var(--rail-bg)", display: "flex", flexDirection: "column", color: "var(--rail-active-fg)", transition: "width .2s ease, min-width .2s ease, max-width .2s ease", borderRight: "1px solid var(--rail-border)" }}>
-      <div style={{ padding: collapsed ? "20px 0 16px" : "24px 18px 18px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ minHeight: 76, padding: collapsed ? "16px 8px" : "16px 18px", boxSizing: "border-box", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
         <Logo icon={collapsed} />
       </div>
       <nav style={{ flex: 1, padding: collapsed ? "4px 10px" : "4px 12px", display: "flex", flexDirection: "column", gap: 2 }}>
@@ -630,10 +630,10 @@ function EdProgram({ p, onOpen, onSystemCheck, variant, timer, timerPos = "top" 
   // ("Not started") is the outline variant (#94918C border, no fill) handled
   // in mds-folio.css off the --status-neutral-bg tell.
   const tag = state === "complete"
-    ? { label: t("statusCompleted"), fg: "#14853D", bg: "color-mix(in srgb, #14853D 15%, var(--card))" }
+    ? { label: t("statusCompleted"), fg: "#14853D", bg: "color-mix(in srgb, #14853D 15%, var(--card))", bd: "#14853D" }
     : state === "notstarted"
-      ? { label: t("statusNotStarted"), fg: "var(--ink)", bg: "var(--status-neutral-bg)" }
-      : { label: t("statusInProgress"), fg: "var(--accent)", bg: "color-mix(in srgb, var(--accent) 15%, var(--card))" };
+      ? { label: t("statusNotStarted"), fg: "var(--ink)", bg: "var(--status-neutral-bg)", bd: "#94918C" }
+      : { label: t("statusInProgress"), fg: "var(--accent)", bg: "color-mix(in srgb, var(--accent) 15%, var(--card))", bd: "var(--accent)" };
   return (
     <div style={{ background: "var(--card)", border: "1px solid var(--line)", borderRadius: 16, padding: 22, display: "flex", flexDirection: "column", overflow: "hidden" }}>
       {timer && timerPos === "top" && (
@@ -644,7 +644,7 @@ function EdProgram({ p, onOpen, onSystemCheck, variant, timer, timerPos = "top" 
         </div>
       )}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, marginBottom: 11 }}>
-        <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, letterSpacing: ".02em", color: tag.fg, background: tag.bg, padding: "4px 10px", borderRadius: 6 }}>{tag.label}</span>
+        <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, letterSpacing: ".02em", color: "var(--ink)", background: tag.bg, border: "1px solid " + tag.bd, padding: "4px 10px", borderRadius: 2 }}>{tag.label}</span>
         {timer && timerPos === "bottom" ? (
           <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400, color: "var(--accent)", fontVariantNumeric: "tabular-nums", display: "flex", alignItems: "center", gap: 6 }}><I.clock size={14} />{cd}</span>
         ) : (

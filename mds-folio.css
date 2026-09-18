@@ -153,7 +153,13 @@ body > div:not([class])[style*="border-radius"]:not([style*="border-radius: 50%"
 :is(#root,body>div:not([class]),.lh-net-overlay) span[style*="background: rgba"][style*="color: var(--success)"][style*="border-radius"]:not([style*="width:"]),
 :is(#root,body>div:not([class]),.lh-net-overlay) span[style*="background: rgba"][style*="color: var(--danger)"][style*="border-radius"]:not([style*="width:"]),
 :is(#root,body>div:not([class]),.lh-net-overlay) span[style*="background: rgba"][style*="color: var(--warn"][style*="border-radius"]:not([style*="width:"]) {
-  border: 1px solid currentColor !important;
+  /* Force the 1px border presence, but NOT its colour: badges that author their
+     own inline border (MDS soft badges now carry a 1px SEMANTIC border while the
+     LABEL is var(--ink)) keep that semantic hue; badges without an inline border
+     fall back to border-color's initial value (currentColor), i.e. the old
+     behaviour. This decouples the outline hue from the text hue. */
+  border-width: 1px !important;
+  border-style: solid !important;
   box-sizing: border-box !important;
 }
 

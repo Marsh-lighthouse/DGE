@@ -541,7 +541,7 @@ function AssessorEditorial() {
   }[s] || NEUTRAL);
   const StatusPill = ({s}) => {
     const cfg = statusStyle(s);
-    return <span style={{fontFamily:f,fontSize:14,fontWeight:400,color:cfg.c,background:cfg.bg,border:`1px solid ${cfg.br||cfg.c}`,boxSizing:"border-box",padding:"4px 11px",borderRadius:6,whiteSpace:"nowrap"}}>{s}</span>;
+    return <span style={{fontFamily:f,fontSize:14,fontWeight:400,color:"var(--ink)",background:cfg.bg,border:`1px solid ${cfg.br||cfg.c}`,boxSizing:"border-box",padding:"4px 11px",borderRadius:2,whiteSpace:"nowrap"}}>{s}</span>;
   };
 
   // ═══════ SIDEBAR + TOPBAR ═══════
@@ -3632,7 +3632,7 @@ function AssessorEditorial() {
                       <td style={acTd}><div style={{display:"flex",alignItems:"center",gap:10,minWidth:0}}>{s2Avatar(p.color,p.name.split(" ").map(n=>n[0]).slice(0,2).join("").toUpperCase())}<div style={{minWidth:0}}><div style={{fontWeight:700,color:tx,fontSize:14}} className="elide">{p.name}</div></div></div></td>
                       <td style={acTd}><span className="elide" style={{display:"block",color:tm,textTransform:"capitalize"}}>{p.campaign}</span></td>
                       <td style={{...acTd,textAlign:"right"}}>{p.slot}</td>
-                      <td style={{...acTd,textAlign:"right"}}>{p.attStatus==="On Time" ? <span className="tag" style={{background:`${green}14`,color:green}}>{p.attStatus}</span> : <span className="tag" style={{background:navyBg,color:tm}}>{p.attStatus}</span>}</td>
+                      <td style={{...acTd,textAlign:"right"}}>{p.attStatus==="On Time" ? <span className="tag" style={{background:`${green}14`,color:"var(--ink)",border:`1px solid ${green}`}}>{p.attStatus}</span> : <span className="tag" style={{background:navyBg,color:tm}}>{p.attStatus}</span>}</td>
                       <td style={{...acTd,position:"relative",paddingRight:26,width:34}}><span className="row-arrow"><I.Chev s={14}/></span></td>
                     </tr>
                   ))}
@@ -3827,7 +3827,7 @@ function AssessorEditorial() {
                           </div>
                         </td>
                         <td style={{...acTd,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.slot}</td>
-                        <td style={acTd}><span className="tag" style={{background:`color-mix(in srgb, var(--accent) 8%, transparent)`,color:teal}}>{p.schStatus}</span></td>
+                        <td style={acTd}><span className="tag" style={{background:`color-mix(in srgb, var(--accent) 8%, transparent)`,color:"var(--ink)",border:`1px solid ${teal}`}}>{p.schStatus}</span></td>
                         <td style={{...acTd,position:"relative",paddingRight:26}}><span className="row-arrow"><I.Chev s={14}/></span></td>
                       </tr>
                     ))}
